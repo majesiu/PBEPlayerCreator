@@ -1,1 +1,67 @@
-/* You can add global styles to this file, and also import other style files */
+/*html, body { height: 100%; }*/
+/*body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }*/
+
+
+
+/*th, td {*/
+/*border-bottom: 1px solid #ddd;*/
+/*}*/
+
+/*tr:nth-child(even) {background-color: #f2f2f2;}*/
+
+th, td {
+  margin-bottom: 0px;
+  padding: 0px;
+}
+
+/*input[type='number']::-webkit-inner-spin-button,*/
+/*input[type='number']::-webkit-outer-spin-button {*/
+/*opacity: 1;*/
+/*}*/
+
+input[type=number]:not(.browser-default) {
+  margin-bottom: 0px;
+  text-align: center;
+  border-bottom: 0px;
+  height: 1rem;
+  padding-left: 7px;
+  line-height: 0px;
+}
+
+input[type=text]:not(.browser-default) {
+  margin-bottom: 0px;
+  border-bottom: 0px;
+}
+
+.collapsible-header {
+  padding: 2px;
+  background-color: rgba(0, 0, 0, 0.0);
+}
+
+.tabs {
+  background-color: rgba(0, 0, 0, 0.0);
+}
+
+.tabs a {
+  color: #0D47A1 !important;
+}
+
+
+.tabs li.indicator {
+  background-color: #0D47A1 !important;
+}
+
+.collapsible-body {
+  padding: 2px;
+}
+
+
+body {
+  background: rgba(25, 55, 111, 0.3) url("assets/PBE_bgg.png") no-repeat center;
+
+}
+
+.page-footer {
+  background-color: #0D47A1;
+  opacity: 0.8;
+}

@@ -1,0 +1,46 @@
+<mat-tab-group>
+    <mat-tab label="Batter">
+      <h2>Batting Attributes</h2>
+      <div class="hittingAttributes">
+        <select [(ngModel)]="selectedHittingArchetype">
+          <option *ngFor="let archetype of hittingArchetypes"
+                  [ngValue]="archetype">
+            {{archetype.name}}
+          </option>
+        </select>
+        <table class="bordered centered">
+          <thead>
+          <tr>
+          </tr>
+          <tr>
+            <th>Attribute</th>
+            <th>Min</th>
+            <th>Max</th>
+            <th>Value</th>
+            <th>Cost</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let attribute of selectedHittingArchetype.attributes">
+            <td>{{attribute.name}}</td>
+            <td>{{attribute.min}}</td>
+            <td>{{attribute.max}}</td>
+            <td><label>
+              <input type="number" [(ngModel)]="attribute.value" name="attribute.value" min={{attribute.min}}
+                     max={{attribute.max}}>
+            </label></td>
+            <td>{{attribute.cost()}}</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </mat-tab>
+    <mat-tab label="Pitcher">
+      <h1>Some more tab content</h1>
+      <p>...</p>
+    </mat-tab>
+  </mat-tab-group>
+
+
+
+

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {Attribute} from './attribute';
+// @ts-ignore
+import BattingArchetypes from '../../assets/BattingArchetypes.json';
+import {Archetype} from './archetype';
 
 @Component({
   selector: 'app-player-calc',
@@ -8,11 +10,22 @@ import {Attribute} from './attribute';
 })
 export class PlayerCalcComponent implements OnInit {
 
-  attribute: Attribute = new Attribute('Test', 25, 50, 50);
+   hittingArchetypes: Archetype[];
+   selectedHittingArchetype: Archetype;
 
-  constructor() { }
+  constructor() {
+
+    const temp = new Array<Archetype>();
+    for (const entry of BattingArchetypes.Archetypes) {
+      const attribute = new Archetype(entry.name, entry.attributes);
+      temp.push(attribute);
+    }
+    this.hittingArchetypes = temp;
+    this.selectedHittingArchetype = this.hittingArchetypes[1];
+  }
 
   ngOnInit() {
+
   }
 
 }
