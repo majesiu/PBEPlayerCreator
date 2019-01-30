@@ -1,14 +1,30 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatSelectModule} from '@angular/material/select';
+import {MatTableModule} from '@angular/material/table';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatSidenavModule} from '@angular/material/sidenav';
 
 import { AppComponent } from './app.component';
+import { PlayerCalcComponent } from './player-calc/player-calc.component';
+import { TradeMachineComponent } from './trade-machine/trade-machine.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PlayerCalcComponent,
+    TradeMachineComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    MatTabsModule,
+    MatSelectModule,
+    MatTableModule,
+    BrowserAnimationsModule,
+    MatSidenavModule
   ],
   providers: [],
   bootstrap: [AppComponent]
