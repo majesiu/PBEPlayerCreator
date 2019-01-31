@@ -12,4 +12,10 @@ export class Archetype {
     }
     this.attributes = temp;
   }
+
+  costSum(): number {
+    let acc = 0;
+    this.attributes.forEach(value => acc += value.cost())
+    return acc;
+  }
 }

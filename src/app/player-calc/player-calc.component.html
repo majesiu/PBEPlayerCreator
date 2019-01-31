@@ -1,17 +1,38 @@
 <mat-tab-group>
-    <mat-tab label="Batter">
-      <h2>Batting Attributes</h2>
-      <div class="hittingAttributes">
+  <mat-tab label="Batter">
+    <table class="bordered centered" style="padding: 0px; margin: 0px;">
+      <tr>
+        <td>Earned TPE</td>
+        <td><input type="number" [(ngModel)]="earnedTPE" name="Earned TPE" min="100"></td>
+      </tr>
+      <tr>
+        <td>Hitting/Fielding TPE</td>
+        <td>{{selectedHittingArchetype.costSum()}}/{{selectedFieldingArchetype.costSum()}}</td>
+      </tr>
+      <tr>
+        <td>TPE Avalaible</td>
+        <td>{{earnedTPE - selectedFieldingArchetype.costSum() - selectedHittingArchetype.costSum()}}</td>
+      </tr>
+    </table>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Batting Attributes
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <mat-panel-description>
+      </mat-panel-description>
+      <div>
         <select [(ngModel)]="selectedHittingArchetype">
           <option *ngFor="let archetype of hittingArchetypes"
                   [ngValue]="archetype">
             {{archetype.name}}
           </option>
         </select>
+      </div>
+      <div class="hittingAttributes">
         <table class="bordered centered">
           <thead>
-          <tr>
-          </tr>
           <tr>
             <th>Attribute</th>
             <th>Min</th>
@@ -34,12 +55,51 @@
           </tbody>
         </table>
       </div>
-    </mat-tab>
-    <mat-tab label="Pitcher">
-      <h1>Some more tab content</h1>
-      <p>...</p>
-    </mat-tab>
-  </mat-tab-group>
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Fielding Attributes
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <mat-panel-description>
+      </mat-panel-description>
+      <div>
+        <select [(ngModel)]="selectedFieldingArchetype">
+          <option *ngFor="let archetype of fieldingArchetypes"
+                  [ngValue]="archetype">
+            {{archetype.name}}
+          </option>
+        </select>
+      </div>
+      <div class="hittingAttributes">
+        <table class="bordered centered">
+          <thead>
+          <tr>
+            <th>Attribute</th>
+            <th>Min</th>
+            <th>Max</th>
+            <th>Value</th>
+            <th>Cost</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let attribute of selectedFieldingArchetype.attributes">
+            <td>{{attribute.name}}</td>
+            <td>{{attribute.min}}</td>
+            <td>{{attribute.max}}</td>
+            <td><label>
+              <input type="number" [(ngModel)]="attribute.value" name="attribute.value" min={{attribute.min}}
+                     max={{attribute.max}}>
+            </label></td>
+            <td>{{attribute.cost()}}</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </mat-expansion-panel>
+  </mat-tab>
+</mat-tab-group>
 
 
 
