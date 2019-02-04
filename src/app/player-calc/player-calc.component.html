@@ -17,6 +17,24 @@
     <mat-expansion-panel>
       <mat-expansion-panel-header>
         <mat-panel-title>
+          Update Scale
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <mat-panel-description>
+      </mat-panel-description>
+      <div class="center aligned">
+        1-40: 1 TPE Per Point<br>
+        40-50: 2 TPE Per Point<br>
+        50-60: 3 TPE Per Point<br>
+        60-70: 4 TPE Per Point<br>
+        70-80: 6 TPE Per Point<br>
+        80-90: 7 TPE Per Point<br>
+        90-115: 8 TPE Per Point<br>
+      </div>
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
           Batting Attributes
         </mat-panel-title>
       </mat-expansion-panel-header>
@@ -93,6 +111,96 @@
                      max={{attribute.max}}>
             </label></td>
             <td>{{attribute.cost()}}</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </mat-expansion-panel>
+  </mat-tab>
+
+  <mat-tab label="Pitcher">
+    <table class="bordered centered" style="padding: 0px; margin: 0px;">
+      <tr>
+        <td>Earned TPE</td>
+        <td><input type="number" [(ngModel)]="earnedTPE" name="Earned TPE" min="100"></td>
+      </tr>
+      <tr>
+        <td>Pitching TPE</td>
+        <td>{{selectedPitchingArchetype.costSum()}}</td>
+      </tr>
+      <tr>
+        <td>TPE Avalaible</td>
+        <td>{{earnedTPE - selectedPitchingArchetype.costSum()}}</td>
+      </tr>
+    </table>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Update Scale
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <mat-panel-description>
+      </mat-panel-description>
+      <div class="centered aligned">
+        1-40: 1 TPE Per Point<br>
+        40-50: 2 TPE Per Point<br>
+        50-60: 3 TPE Per Point<br>
+        60-70: 4 TPE Per Point<br>
+        70-80: 6 TPE Per Point<br>
+        80-90: 7 TPE Per Point<br>
+        90-115: 8 TPE Per Point<br>
+      </div>
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Pitching Attributes
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <mat-panel-description>
+      </mat-panel-description>
+      <div>
+        <select [(ngModel)]="selectedPitchingArchetype">
+          <option *ngFor="let archetype of pitchingArchetypes"
+                  [ngValue]="archetype">
+            {{archetype.name}}
+          </option>
+        </select>
+      </div>
+      <div class="hittingAttributes">
+        <table class="bordered centered">
+          <thead>
+          <tr>
+            <th>Attribute</th>
+            <th>Min</th>
+            <th>Max</th>
+            <th>Value</th>
+            <th>Cost</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let attribute of selectedPitchingArchetype.attributes">
+            <td>{{attribute.name}}</td>
+            <td>{{attribute.min}}</td>
+            <td>{{attribute.max}}</td>
+            <td><label>
+              <input type="number" [(ngModel)]="attribute.value" name="attribute.value" min={{attribute.min}}
+                     max={{attribute.max}}>
+            </label></td>
+            <td>{{attribute.cost()}}</td>
+          </tr>
+          <tr>
+            <td>{{selectedPitchingArchetype.velocity.name}}</td>
+            <td>{{selectedPitchingArchetype.velocity.min}}</td>
+            <td>{{selectedPitchingArchetype.velocity.max}}</td>
+            <td>
+              <select class="centered aligned" [(ngModel)]="selectedPitchingArchetype.velocity.value">
+                <option *ngFor="let velocityValue of velocityValues"
+                        [ngValue]="velocityValue">
+                  {{velocityValue}}
+                </option>
+              </select> </td>
+            <td>{{selectedPitchingArchetype.velocity.cost()}}</td>
           </tr>
           </tbody>
         </table>
