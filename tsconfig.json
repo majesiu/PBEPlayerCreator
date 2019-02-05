@@ -14,8 +14,8 @@
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "types": [
-      "jquery",
-      "materialize-css"
+      "jquery"
+//      "materialize-css"
     ],
     "typeRoots": [
       "node_modules/@types"

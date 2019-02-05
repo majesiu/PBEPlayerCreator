@@ -61,7 +61,8 @@ export class PlayerCalcComponent implements OnInit {
     '99 - 101',
     '100'];
 
-  earnedTPE = 100;
+  earnedBatterTPE = 100;
+  earnedPitcherTPE = 100;
   hittingArchetypes: Archetype[];
   selectedHittingArchetype: Archetype;
   fieldingArchetypes: Archetype[];
