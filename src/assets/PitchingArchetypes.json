@@ -55,12 +55,12 @@
         },
         {
           "name": "Pitch 4:",
-          "min": 0,
+          "min": 40,
           "max": 70
         },
         {
           "name": "Pitch 5:",
-          "min": 0,
+          "min": 40,
           "max": 60
         }
       ]
@@ -120,12 +120,12 @@
         },
         {
           "name": "Pitch 4:",
-          "min": 0,
+          "min": 40,
           "max": 70
         },
         {
           "name": "Pitch 5:",
-          "min": 0,
+          "min": 40,
           "max": 60
         }
       ]
@@ -185,12 +185,12 @@
         },
         {
           "name": "Pitch 4:",
-          "min": 0,
+          "min": 40,
           "max": 80
         },
         {
           "name": "Pitch 5:",
-          "min": 0,
+          "min": 40,
           "max": 75
         }
       ]
@@ -250,12 +250,12 @@
         },
         {
           "name": "Pitch 4:",
-          "min": 0,
+          "min": 40,
           "max": 70
         },
         {
           "name": "Pitch 5:",
-          "min": 0,
+          "min": 40,
           "max": 60
         }
       ]
@@ -315,12 +315,12 @@
         },
         {
           "name": "Pitch 4:",
-          "min": 0,
+          "min": 40,
           "max": 70
         },
         {
           "name": "Pitch 5:",
-          "min": 0,
+          "min": 40,
           "max": 60
         }
       ]
@@ -380,12 +380,12 @@
         },
         {
           "name": "Pitch 4:",
-          "min": 0,
+          "min": 40,
           "max": 80
         },
         {
           "name": "Pitch 5:",
-          "min": 0,
+          "min": 40,
           "max": 70
         }
       ]
@@ -445,12 +445,12 @@
         },
         {
           "name": "Pitch 4:",
-          "min": 0,
+          "min": 40,
           "max": 70
         },
         {
           "name": "Pitch 5:",
-          "min": 0,
+          "min": 40,
           "max": 60
         }
       ]
@@ -510,12 +510,12 @@
         },
         {
           "name": "Pitch 4:",
-          "min": 0,
+          "min": 40,
           "max": 70
         },
         {
           "name": "Pitch 5:",
-          "min": 0,
+          "min": 40,
           "max": 60
         }
       ]

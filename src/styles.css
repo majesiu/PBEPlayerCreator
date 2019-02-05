@@ -62,7 +62,12 @@ input[type=text]:not(.browser-default) {
 
 body {
   background: rgba(25, 55, 111, 0.3) url("assets/PBE_bgg.png") no-repeat center;
+  height: 100%;
+}
 
+select{
+  height: 1.5rem;
+  color: black;
 }
 
 .page-footer {
@@ -75,8 +80,11 @@ select {
   display: flex;
   background-color: rgba(0, 0, 0, 0.0);
   padding: 0px;
+  text-align-last:center;
+  font-size: 14px;
 }
 
 input {
   color: black;
+  text-align-last:center;
 }

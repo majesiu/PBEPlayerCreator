@@ -5,18 +5,20 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {MatSelectModule} from '@angular/material/select';
 import {MatTableModule} from '@angular/material/table';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatExpansionModule} from '@angular/material/expansion';
 
 import { AppComponent } from './app.component';
 import { PlayerCalcComponent } from './player-calc/player-calc.component';
 import { TradeMachineComponent } from './trade-machine/trade-machine.component';
+import { PlayerFormComponent } from './player-form/player-form.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     PlayerCalcComponent,
-    TradeMachineComponent
+    TradeMachineComponent,
+    PlayerFormComponent
   ],
   imports: [
     BrowserModule,
@@ -25,8 +27,8 @@ import { TradeMachineComponent } from './trade-machine/trade-machine.component';
     MatSelectModule,
     MatTableModule,
     BrowserAnimationsModule,
-    MatSidenavModule,
-    MatExpansionModule
+    MatExpansionModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
