@@ -41,6 +41,9 @@ export class PlayerCalcComponent implements OnInit {
     this.pitchingArchetypes = temp3;
     this.selectedPitchingArchetype = this.pitchingArchetypes[0];
   }
+  selectedPitches = ['Pitch 1', 'Pitch 2', 'Pitch 3', 'Pitch 4', 'Pitch 5'];
+  pitches = ['Fastball', 'Sinker', 'Cutter', 'Curveball', 'Slider', 'Changeup', 'Splitter', 'Forkball', 'Circle Change',
+    'Screwball', 'Knuckle Curve'];
   public velocityValues = ['80 - 83',
     '83 - 85',
     '84 - 86',
