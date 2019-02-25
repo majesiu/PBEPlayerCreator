@@ -35,6 +35,16 @@ input[type=number]:not(.browser-default) {
 input[type=text]:not(.browser-default) {
   margin-bottom: 0px;
   border-bottom: 0px;
+  margin-bottom: 0px;
+  text-align: center;
+  border-bottom: 0px;
+  height: 1rem;
+  padding-left: 7px;
+  line-height: 0px;
+}
+
+input::placeholder {
+  color: gray;
 }
 
 .collapsible-header {

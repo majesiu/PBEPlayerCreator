@@ -24,16 +24,6 @@
           "max": 60
         },
         {
-          "name": "Power vs LHP:",
-          "min": 40,
-          "max": 100
-        },
-        {
-          "name": "Power vs RHP:",
-          "min": 40,
-          "max": 100
-        },
-        {
           "name": "Gap vs LHP:",
           "min": 30,
           "max": 80
@@ -42,6 +32,16 @@
           "name": "Gap vs RHP:",
           "min": 30,
           "max": 80
+        },
+        {
+          "name": "Power vs LHP:",
+          "min": 40,
+          "max": 100
+        },
+        {
+          "name": "Power vs RHP:",
+          "min": 40,
+          "max": 100
         },
         {
           "name": "Eye/Patience vs LHP:",
@@ -94,16 +94,6 @@
           "max": 80
         },
         {
-          "name": "Power vs LHP:",
-          "min": 30,
-          "max": 80
-        },
-        {
-          "name": "Power vs RHP:",
-          "min": 30,
-          "max": 80
-        },
-        {
           "name": "Gap vs LHP:",
           "min": 25,
           "max": 80
@@ -111,6 +101,16 @@
         {
           "name": "Gap vs RHP:",
           "min": 25,
+          "max": 80
+        },
+        {
+          "name": "Power vs LHP:",
+          "min": 30,
+          "max": 80
+        },
+        {
+          "name": "Power vs RHP:",
+          "min": 30,
           "max": 80
         },
         {
@@ -164,16 +164,6 @@
           "max": 95
         },
         {
-          "name": "Power vs LHP:",
-          "min": 20,
-          "max": 55
-        },
-        {
-          "name": "Power vs RHP:",
-          "min": 20,
-          "max": 55
-        },
-        {
           "name": "Gap vs LHP:",
           "min": 20,
           "max": 65
@@ -182,6 +172,16 @@
           "name": "Gap vs RHP:",
           "min": 20,
           "max": 65
+        },
+        {
+          "name": "Power vs LHP:",
+          "min": 20,
+          "max": 55
+        },
+        {
+          "name": "Power vs RHP:",
+          "min": 20,
+          "max": 55
         },
         {
           "name": "Eye/Patience vs LHP:",
@@ -234,16 +234,6 @@
           "max": 80
         },
         {
-          "name": "Power vs LHP:",
-          "min": 15,
-          "max": 50
-        },
-        {
-          "name": "Power vs RHP:",
-          "min": 15,
-          "max": 50
-        },
-        {
           "name": "Gap vs LHP:",
           "min": 15,
           "max": 55
@@ -252,6 +242,16 @@
           "name": "Gap vs RHP:",
           "min": 15,
           "max": 55
+        },
+        {
+          "name": "Power vs LHP:",
+          "min": 15,
+          "max": 50
+        },
+        {
+          "name": "Power vs RHP:",
+          "min": 15,
+          "max": 50
         },
         {
           "name": "Eye/Patience vs LHP:",
