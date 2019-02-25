@@ -1,3 +1,94 @@
+<p class="bordered centered">Create Player Form</p>
+<table class="bordered centered" style="padding: 0; margin: 0;">
+  <tr>
+    <td>Username:</td>
+    <td><label>
+      <input type="text" [(ngModel)]="Username" placeholder="Username">
+    </label></td>
+  </tr>
+  <tr>
+    <td>First Name:</td>
+    <td><label>
+      <input type="text" [(ngModel)]="FirstName" placeholder="First Name" required>
+    </label></td>
+  </tr>
+  <tr>
+    <td>Last Name</td>
+    <td><label>
+      <input type="text" [(ngModel)]="LastName" placeholder="Last Name" required>
+    </label></td>
+  </tr>
+  <tr>
+    <td>Number</td>
+    <td><label>
+      <input type="number" [(ngModel)]="Number" placeholder="Number" required>
+    </label></td>
+  </tr>
+  <tr>
+    <td>Position</td>
+    <td><label>
+      <select class="centered aligned" [(ngModel)]="SelectedPosition" required>
+        <option *ngFor="let position of positions"
+                [ngValue]="position">
+          {{position}}
+        </option>
+      </select>
+    </label></td>
+  </tr>
+  <tr>
+    <td>College/High School</td>
+    <td><label>
+      <input type="text" [(ngModel)]="College" placeholder="College/High School">
+    </label></td>
+  </tr>
+  <tr>
+    <td>Birthdate</td>
+    <td><label>
+      <input type="text" [(ngModel)]="Birthdate" placeholder="Birthdate" required>
+    </label></td>
+  </tr>
+  <tr>
+    <td>Throws</td>
+    <td><label>
+      <select class="centered aligned" [(ngModel)]="Throws" required>
+        <option *ngFor="let throwingHand of ['Left', 'Right']"
+                [ngValue]="throwingHand">
+          {{throwingHand}}
+        </option>
+      </select>
+    </label></td>
+  </tr>
+  <tr>
+    <td>Recruited by</td>
+    <td><label>
+      <input type="text" [(ngModel)]="Recruited" placeholder="Recruited by">
+    </label></td>
+  </tr>
+  <tr>
+    <td>Height: (MIN: 5'8" / MAX: 6'8")</td>
+    <td><label>
+      <input type="text" [(ngModel)]="Height" placeholder="Height" required>
+    </label></td>
+  </tr>
+  <tr>
+    <td>Weight: (MIN: 160 / MAX: 280) 195</td>
+    <td><label>
+      <input type="text" [(ngModel)]="Weight" placeholder="Weight" required>
+    </label></td>
+  </tr>
+  <tr>
+    <td>Birthplace</td>
+    <td><label>
+      <input type="text" [(ngModel)]="Birthplace" placeholder="Birthplace">
+    </label></td>
+  </tr>
+  <tr>
+    <td>Discord name</td>
+    <td><label>
+      <input type="text" [(ngModel)]="Discord" placeholder="Discord Name">
+    </label></td>
+  </tr>
+</table>
 <mat-tab-group
   dynamicHeight="true"
   mat-align-tabs="center"
@@ -7,7 +98,7 @@
       <tr>
         <td>Earned TPE</td>
         <td><label>
-          <input type="number" [(ngModel)]="earnedPitcherTPE" name="Earned TPE" min="100">
+          <input type="number" [(ngModel)]="earnedPitcherTPE" name="Starting TPE" min="100" max="100">
         </label></td>
       </tr>
       <tr>
@@ -135,6 +226,11 @@
           </tbody>
         </table>
       </div>
+      <table>
+        <tr>
+          <button style="width: 100%" (click)="createPitcher()">Create!</button>
+        </tr>
+      </table>
     </mat-expansion-panel>
   </mat-tab>
   <mat-tab label="Batter">
@@ -262,7 +358,79 @@
           </tr>
           </tbody>
         </table>
+        <table class="bordered centered" style="padding: 0; margin: 0;">
+          <tr>
+            <td>Bats:</td>
+            <select class="centered aligned" [(ngModel)]="Bats">
+              <option *ngFor="let BatsHand of ['Left', 'Right', 'Switch']"
+                      [ngValue]="BatsHand">
+                {{BatsHand}}
+              </option>
+            </select>
+          </tr>
+          <tr>
+            <td>Hitting Type:</td>
+            <select class="centered aligned" [(ngModel)]="Hitting">
+              <option *ngFor="let HittingType of ['Normal', 'Pull', 'Extreme Pull', 'Spray']"
+                      [ngValue]="HittingType">
+                {{HittingType}}
+              </option>
+            </select>
+          </tr>
+          <tr>
+            <td>Main Position (200/200 EXP)</td>
+            <select class="centered aligned" [(ngModel)]="SelectedPosition" required>
+              <option *ngFor="let position of positions"
+                      [ngValue]="position">
+                {{position}}
+              </option>
+            </select>
+          </tr>
+          <tr>
+            <td>Secondary Position (150/200 EXP)</td>
+            <select class="centered aligned" [(ngModel)]="Selected2Position" required>
+              <option *ngFor="let position of positions"
+                      [ngValue]="">
+                {{position}}
+              </option>
+            </select>
+          </tr>
+          <tr>
+            <td>Tertiary Position (100/200 EXP)</td>
+            <select class="centered aligned" [(ngModel)]="Selected3Position" required>
+              <option *ngFor="let position of positions"
+                      [ngValue]="">
+                {{position}}
+              </option>
+            </select>
+          </tr>
+
+          <tr *ngIf="selectedFieldingArchetype === fieldingArchetypes[6]">
+            <td>Fourth Position (100/200 EXP)</td>
+            <select class="centered aligned" [(ngModel)]="Selected4Position" required>
+              <option *ngFor="let position of positions"
+                      [ngValue]="">
+                {{position}}
+              </option>
+            </select>
+          </tr>
+
+          <tr *ngIf="selectedFieldingArchetype === fieldingArchetypes[6]">
+            <td>Fifth Position (100/200 EXP)</td>
+            <select class="centered aligned" [(ngModel)]="Selected5Position" required>
+              <option *ngFor="let position of positions"
+                      [ngValue]="">
+                {{position}}
+              </option>
+            </select>
+          </tr>
+        </table>
       </div>
+      <table>
+        <tr>
+          <button style="width: 100%" (click)="createBatter()">Create!</button>
+        </tr>
+      </table>
     </mat-expansion-panel>
   </mat-tab>
 </mat-tab-group>

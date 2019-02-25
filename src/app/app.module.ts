@@ -6,12 +6,13 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatTableModule} from '@angular/material/table';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatExpansionModule} from '@angular/material/expansion';
-
+import {MatDatepickerModule} from '@angular/material/datepicker';
 import { AppComponent } from './app.component';
 import { PlayerCalcComponent } from './player-calc/player-calc.component';
 import { TradeMachineComponent } from './trade-machine/trade-machine.component';
 import { PlayerFormComponent } from './player-form/player-form.component';
 import { AppRoutingModule } from './app-routing.module';
+import {MatNativeDateModule} from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,8 @@ import { AppRoutingModule } from './app-routing.module';
     MatTableModule,
     BrowserAnimationsModule,
     MatExpansionModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
     AppRoutingModule
   ],
   providers: [],
