@@ -28,6 +28,11 @@ export class Attribute {
                     (this.value - 50) : this.value <= 70 ? 90 + 4 * (this.value - 60) : this.value <= 80 ? 130 + 6 *
                     (this.value - 70) : this.value <= 90 ? 190 + 7 * (this.value - 80) : 260 + 8 * (this.value - 90);
     return valueCost - minCost + (['Pitch 4:', 'Pitch 5:'].includes(this.name) ? 50 : 0);
-
+  }
+  baseCost(): number {
+    const minCost = this.min <= 40 ? this.min : this.min <= 50 ? 40 + 2 * (this.min - 40) : this.min <= 60 ? 60 + 3 * (this.min - 50) :
+      this.min <= 70 ? 90 + 4 * (this.min - 60) : this.min <= 80 ? 130 + 6 * (this.min - 70) : this.min <= 90 ?
+        190 + 7 * (this.min - 80) : 260 + 8 * (this.min - 90);
+    return ['Pitch 4:', 'Pitch 5:', 'Bunting (Both):'].includes(this.name) ? 0 : minCost;
   }
 }

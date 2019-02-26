@@ -139,7 +139,7 @@ export class PlayerFormComponent implements OnInit {
       return alert('Please Select the Position');
     }
     formString += '\n[b]Position:[/b] ' + this.SelectedPosition;
-    formString += '\n[b]Username:[/b] ' + this.College;
+    formString += '\n[b]College:[/b] ' + this.College;
     if (this.Birthdate === '') {
       return alert('Please input the Birthdate of your player');
     }
@@ -170,10 +170,10 @@ export class PlayerFormComponent implements OnInit {
     formString += '\n\n[color=red][u][b]Hitting Attributes: [/b][/u][/color]';
     if (this.selectedFieldingArchetype !== this.fieldingArchetypes [5]) {
       if (this.selectedFieldingArchetype.costSum() !== 50 || this.selectedHittingArchetype.costSum() !== 50) {
-        return alert('You have to spent 50 TPE in each Hitting and Fielding');
+        return alert('You have to spent exactly 50 TPE in each Hitting and Fielding');
       }
     } else if (this.selectedFieldingArchetype.costSum() !== 0 || this.selectedHittingArchetype.costSum() !== 100) {
-      return alert('As DH You have to spent 100 starting TPE in Hitting and none in Fielding');
+      return alert('As DH You have to spent exactly 100 starting TPE in Hitting and none in Fielding');
     }
     formString += '\n[b]Hitting Archetype:[/b] ' + this.selectedHittingArchetype.name;
     for (const att of this.selectedHittingArchetype.attributes) {
@@ -208,13 +208,13 @@ export class PlayerFormComponent implements OnInit {
       }
       formString += '\n5th Position (100/200 experience): ' + this.Selected5Position;
     }
-    alert('New thread on forums will open up - template was copied into clipboard, paste it there and create the thread');
     this.copyStringToClipboard(formString);
+    alert('New thread on forums will open up - template was copied into clipboard, paste it there and create the thread');
     window.open('http://probaseballexperience.jcink.net/index.php?act=Post&CODE=00&f=2');
 
   }
 
-  createPitcher() {
+  createPitcher() { 
     let formString = '[color=red][u][b]Player Information[/b][/u][/color]';
     if (this.Username === '') {
       return alert('Please input the Username');
@@ -236,7 +236,7 @@ export class PlayerFormComponent implements OnInit {
       return alert('Please Select the Position');
     }
     formString += '\n[b]Position:[/b] ' + this.SelectedPosition;
-    formString += '\n[b]Username:[/b] ' + this.College;
+    formString += '\n[b]College:[/b] ' + this.College;
     if (this.Birthdate === '') {
       return alert('Please input the Birthdate of your player');
     }
@@ -258,18 +258,22 @@ export class PlayerFormComponent implements OnInit {
     formString += '\n[b]Discord name:[/b] ' + this.Discord;
     formString += '\n\n[color=red][u][b]Pitching Attributes: [/b][/u][/color]';
     if (this.selectedPitchingArchetype.costSum() !== 100) {
-      return alert('You have to spent initial 100 TPE');
+      return alert('You have to spent exactly 100 of your initial TPE');
     }
     formString += '\n[b]Player Archetype:[/b] ' + this.selectedPitchingArchetype.name;
     for (const att of this.selectedPitchingArchetype.attributes) {
       formString += '\n(MIN: ' + att.min + ') (MAX: ' + att.max + ') '
         + att.name + ' ' + att.value;
     }
-    formString += '\nPitches:' + this.selectedPitches[0] + ', ' + this.selectedPitches[1] + ', '
+    if (this.selectedPitches[0].startsWith('Pitch') || this.selectedPitches[1].startsWith('Pitch') ||
+      this.selectedPitches[2].startsWith('Pitch') ) {
+      return alert('Please select your 3 starting pitches');
+    }
+    formString += '\nPitches: ' + this.selectedPitches[0] + ', ' + this.selectedPitches[1] + ', '
       + this.selectedPitches[2] + ', ' + this.selectedPitches[3];
 
-      alert('New thread on forums will open up - template was copied into clipboard, paste it there and create the thread');
     this.copyStringToClipboard(formString);
+    alert('New thread on forums will open up - template was copied into clipboard, paste it there and create the thread');
     window.open('http://probaseballexperience.jcink.net/index.php?act=Post&CODE=00&f=2');
 
   }

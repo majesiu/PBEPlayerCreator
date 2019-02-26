@@ -1,31 +1,52 @@
-<p class="bordered centered">Create Player Form</p>
+
+      <div class="bordered center">
+      <h5>Create Player Form</h5>
+      </div>
+      <div class="bordered center" style="margin-bottom:
+10px" >
+          <button style="margin-right: 20px" class="btn waves-effect waves-navy">
+            <a href="http://probaseballexperience.jcink.net/index.php?" target="_blank">PBE Site</a>
+          </button>
+          <button style="margin-right: 20px" class="btn waves-effect waves-navy">
+            <a href="http://probaseballexperience.jcink.net/index.php?showtopic=2570" target="_blank">Attribute Guide</a>
+          </button>
+          <button style="margin-right: 20px" class="btn waves-effect waves-navy">
+            <a href="http://probaseballexperience.jcink.net/index.php?showtopic=54" target="_blank">New Player Guide</a>
+          </button>
+          <button style="margin-right: 20px" class="btn waves-effect waves-navy">
+            <a href="http://pbesim.com" target="_blank">PBE Index</a>
+          </button>
+          <button class="btn waves-effect waves-navy">
+            <a href="https://discord.gg/wMhQcxW" target="_blank">League Discord</a>
+          </button>
+      </div>
 <table class="bordered centered" style="padding: 0; margin: 0;">
-  <tr>
-    <td>Username:</td>
+  <tr >
+    <td style="font-weight: bold;">Username:</td>
     <td><label>
       <input type="text" [(ngModel)]="Username" placeholder="Username">
     </label></td>
   </tr>
   <tr>
-    <td>First Name:</td>
+    <td style="font-weight: bold;">First Name:</td>
     <td><label>
       <input type="text" [(ngModel)]="FirstName" placeholder="First Name" required>
     </label></td>
   </tr>
   <tr>
-    <td>Last Name</td>
+    <td style="font-weight: bold;">Last Name</td>
     <td><label>
       <input type="text" [(ngModel)]="LastName" placeholder="Last Name" required>
     </label></td>
   </tr>
   <tr>
-    <td>Number</td>
+    <td style="font-weight: bold;">Number</td>
     <td><label>
       <input type="number" [(ngModel)]="Number" placeholder="Number" required>
     </label></td>
   </tr>
   <tr>
-    <td>Position</td>
+    <td style="font-weight: bold;">Position</td>
     <td><label>
       <select class="centered aligned" [(ngModel)]="SelectedPosition" required>
         <option *ngFor="let position of positions"
@@ -42,13 +63,13 @@
     </label></td>
   </tr>
   <tr>
-    <td>Birthdate</td>
+    <td style="font-weight: bold;">Birthdate</td>
     <td><label>
       <input type="text" [(ngModel)]="Birthdate" placeholder="Birthdate" required>
     </label></td>
   </tr>
   <tr>
-    <td>Throws</td>
+    <td style="font-weight: bold;">Throws</td>
     <td><label>
       <select class="centered aligned" [(ngModel)]="Throws" required>
         <option *ngFor="let throwingHand of ['Left', 'Right']"
@@ -65,19 +86,19 @@
     </label></td>
   </tr>
   <tr>
-    <td>Height: (MIN: 5'8" / MAX: 6'8")</td>
+    <td style="font-weight: bold;">Height: (MIN: 5'8" / MAX: 6'8")</td>
     <td><label>
       <input type="text" [(ngModel)]="Height" placeholder="Height" required>
     </label></td>
   </tr>
   <tr>
-    <td>Weight: (MIN: 160 / MAX: 280) 195</td>
+    <td style="font-weight: bold;">Weight: (MIN: 160 / MAX: 280) 195</td>
     <td><label>
       <input type="text" [(ngModel)]="Weight" placeholder="Weight" required>
     </label></td>
   </tr>
   <tr>
-    <td>Birthplace</td>
+    <td style="font-weight: bold;">Birthplace</td>
     <td><label>
       <input type="text" [(ngModel)]="Birthplace" placeholder="Birthplace">
     </label></td>
@@ -108,6 +129,10 @@
       <tr>
         <td>TPE Avalaible</td>
         <td>{{earnedPitcherTPE - selectedPitchingArchetype.costSum()}}</td>
+      </tr>
+      <tr>
+        <td>Base TPE</td>
+        <td>{{selectedPitchingArchetype.costBase()}}</td>
       </tr>
     </table>
     <mat-expansion-panel>
@@ -228,7 +253,10 @@
       </div>
       <table>
         <tr>
-          <button style="width: 100%" (click)="createPitcher()">Create!</button>
+
+          <div class="bordered center">
+            <button style="width: 50%" class="btn waves-effect waves-navy" (click)="createPitcher()">Create!</button>
+          </div>
         </tr>
       </table>
     </mat-expansion-panel>
@@ -248,6 +276,10 @@
       <tr>
         <td>TPE Avalaible</td>
         <td>{{earnedBatterTPE - selectedFieldingArchetype.costSum() - selectedHittingArchetype.costSum()}}</td>
+      </tr>
+      <tr>
+        <td>Base TPE</td>
+        <td>{{selectedHittingArchetype.costBase()+selectedFieldingArchetype.costBase()}}</td>
       </tr>
     </table>
     <mat-expansion-panel>
@@ -428,7 +460,9 @@
       </div>
       <table>
         <tr>
-          <button style="width: 100%" (click)="createBatter()">Create!</button>
+          <div class="bordered center">
+            <button style="width: 50%" class="btn waves-effect waves-navy" (click)="createBatter()">Create!</button>
+          </div>
         </tr>
       </table>
     </mat-expansion-panel>

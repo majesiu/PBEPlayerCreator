@@ -17,4 +17,10 @@ export class PitchingArchetype extends Archetype {
     acc += this.velocity.cost();
     return acc;
   }
+  costBase(): number {
+    let acc = 0;
+    this.attributes.forEach(value => acc += value.baseCost());
+    acc += this.velocity.baseCost();
+    return acc + (['Knuckleball Pitcher (eg. R.A Dickey)'].includes(this.name) ? 300 : 0);
+  }
 }

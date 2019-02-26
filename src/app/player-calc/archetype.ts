@@ -18,4 +18,9 @@ export class Archetype {
     this.attributes.forEach(value => acc += value.cost())
     return acc;
   }
+  costBase(): number {
+    let acc = 0;
+    this.attributes.forEach(value => acc += value.baseCost())
+    return acc;
+  }
 }

@@ -96,4 +96,7 @@ export class Velocity {
   cost(): number {
     return Velocity.veloValue(this.value) - Velocity.veloValue(this.min);
   }
+  baseCost(): number {
+    return Velocity.veloValue(this.min);
+  }
 }
