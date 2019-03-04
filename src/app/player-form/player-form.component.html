@@ -1,51 +1,51 @@
-
-      <div class="bordered center">
-      <h5>Create Player Form</h5>
-      </div>
-      <div class="bordered center" style="margin-bottom:
-10px" >
-          <button style="margin-right: 20px" class="btn waves-effect waves-navy">
-            <a href="http://probaseballexperience.jcink.net/index.php?" target="_blank">PBE Site</a>
-          </button>
-          <button style="margin-right: 20px" class="btn waves-effect waves-navy">
-            <a href="http://probaseballexperience.jcink.net/index.php?showtopic=2570" target="_blank">Attribute Guide</a>
-          </button>
-          <button style="margin-right: 20px" class="btn waves-effect waves-navy">
-            <a href="http://probaseballexperience.jcink.net/index.php?showtopic=54" target="_blank">New Player Guide</a>
-          </button>
-          <button style="margin-right: 20px" class="btn waves-effect waves-navy">
-            <a href="http://pbesim.com" target="_blank">PBE Index</a>
-          </button>
-          <button class="btn waves-effect waves-navy">
-            <a href="https://discord.gg/wMhQcxW" target="_blank">League Discord</a>
-          </button>
-      </div>
+<div class="bordered center">
+  <h5>Create Player Form</h5>
+</div>
+<div  class="bordered center" style="margin-bottom:
+10px">
+  <a show-delay="250" placement="bottom" tooltip="Click to check which positions are currently in biggest demand" class="" href="http://probaseballexperience.jcink.net/index.php?showtopic=2182" target="_blank"><button style="margin-right: 20px" class="btn waves-effect waves-navy">
+   Position Tracker
+  </button></a>
+  <a show-delay="250" placement="bottom" tooltip="Click to read about attributes in depth" class="" href="http://probaseballexperience.jcink.net/index.php?showtopic=2570" target="_blank"><button style="margin-right: 20px" class="btn waves-effect waves-navy">
+    Attribute Guide
+  </button></a>
+  <a show-delay="250" placement="bottom" tooltip="Click to find about first steps in the league" class="" href="http://probaseballexperience.jcink.net/index.php?showtopic=54" target="_blank"><button style="margin-right: 20px" class="btn waves-effect waves-navy">
+    New Player Guide
+  </button></a>
+  <a show-delay="250" placement="bottom" tooltip="Click to see sim results" class="" href="http://pbesim.com" target="_blank"><button style="margin-right: 20px" class="btn waves-effect waves-navy">
+    PBE Index
+  </button></a>
+  <a show-delay="250" placement="bottom" tooltip="Click to join league discord, great place to ask questions" class="" href="https://discord.gg/wMhQcxW" target="_blank"><button class="btn waves-effect waves-navy">
+    League Discord
+  </button></a>
+</div>
 <table class="bordered centered" style="padding: 0; margin: 0;">
-  <tr >
+  <tr show-delay="250" placement="bottom" tooltip="Your forum username" class="">
     <td style="font-weight: bold;">Username:</td>
     <td><label>
       <input type="text" [(ngModel)]="Username" placeholder="Username">
     </label></td>
   </tr>
-  <tr>
+  <tr show-delay="250" placement="bottom" tooltip="Your players first name" class="">
     <td style="font-weight: bold;">First Name:</td>
     <td><label>
       <input type="text" [(ngModel)]="FirstName" placeholder="First Name" required>
     </label></td>
   </tr>
-  <tr>
+  <tr show-delay="250" placement="bottom" tooltip="Your players last name" class="">
     <td style="font-weight: bold;">Last Name</td>
     <td><label>
       <input type="text" [(ngModel)]="LastName" placeholder="Last Name" required>
     </label></td>
   </tr>
-  <tr>
+  <tr show-delay="250" placement="bottom" tooltip="Number your player will wear in the sim" class="">
     <td style="font-weight: bold;">Number</td>
     <td><label>
       <input type="number" [(ngModel)]="Number" placeholder="Number" required>
     </label></td>
   </tr>
-  <tr>
+  <tr show-delay="250" placement="bottom" tooltip="Position your player will play, to become pitcher it has to
+  be either Closer (also Mid/Long Relief Archetype) or Starting pitcher. Rest of the positions are Batters." class="">
     <td style="font-weight: bold;">Position</td>
     <td><label>
       <select class="centered aligned" [(ngModel)]="SelectedPosition" required>
@@ -56,19 +56,19 @@
       </select>
     </label></td>
   </tr>
-  <tr>
+  <tr show-delay="250" placement="bottom" tooltip="Optional" class="">
     <td>College/High School</td>
     <td><label>
       <input type="text" [(ngModel)]="College" placeholder="College/High School">
     </label></td>
   </tr>
-  <tr>
+  <tr show-delay="250" placement="bottom" tooltip="The date in the sim, league is currently in year 2026" class="">
     <td style="font-weight: bold;">Birthdate</td>
     <td><label>
       <input type="text" [(ngModel)]="Birthdate" placeholder="Birthdate" required>
     </label></td>
   </tr>
-  <tr>
+  <tr show-delay="250" placement="bottom" tooltip="Throwing Hand, also important for fielding" class="">
     <td style="font-weight: bold;">Throws</td>
     <td><label>
       <select class="centered aligned" [(ngModel)]="Throws" required>
@@ -79,115 +79,118 @@
       </select>
     </label></td>
   </tr>
-  <tr>
+  <tr show-delay="250" placement="bottom" tooltip="Optional, input a person nickname so they can get bonus for recruiting you" class="">
     <td>Recruited by</td>
     <td><label>
       <input type="text" [(ngModel)]="Recruited" placeholder="Recruited by">
     </label></td>
   </tr>
-  <tr>
+  <tr show-delay="250" placement="bottom" tooltip="The weight of your player, affects only First Base Defence" class="">
     <td style="font-weight: bold;">Height: (MIN: 5'8" / MAX: 6'8")</td>
     <td><label>
       <input type="text" [(ngModel)]="Height" placeholder="Height" required>
     </label></td>
   </tr>
-  <tr>
+  <tr show-delay="250" placement="bottom" tooltip="Height of your player, purely cosmetic" class="">
     <td style="font-weight: bold;">Weight: (MIN: 160 / MAX: 280) 195</td>
     <td><label>
       <input type="text" [(ngModel)]="Weight" placeholder="Weight" required>
     </label></td>
   </tr>
-  <tr>
+  <tr show-delay="250" placement="bottom" tooltip="Birthplace of your player, also dictates his Nation" class="">
     <td style="font-weight: bold;">Birthplace</td>
     <td><label>
       <input type="text" [(ngModel)]="Birthplace" placeholder="Birthplace">
     </label></td>
   </tr>
-  <tr>
+  <tr show-delay="250" placement="bottom" tooltip="Optional, makes communication easier" class="">
     <td>Discord name</td>
     <td><label>
       <input type="text" [(ngModel)]="Discord" placeholder="Discord Name">
     </label></td>
   </tr>
 </table>
-<mat-tab-group
-  dynamicHeight="true"
-  mat-align-tabs="center"
-  animationDuration="0ms">
-  <mat-tab label="Pitcher">
-    <table class="bordered centered" style="padding: 0; margin: 0;">
-      <tr>
-        <td>Earned TPE</td>
-        <td><label>
-          <input type="number" [(ngModel)]="earnedPitcherTPE" name="Starting TPE" min="100" max="100">
-        </label></td>
-      </tr>
-      <tr>
-        <td>Pitching TPE</td>
-        <td>{{selectedPitchingArchetype.costSum()}}</td>
-      </tr>
-      <tr>
-        <td>TPE Avalaible</td>
-        <td>{{earnedPitcherTPE - selectedPitchingArchetype.costSum()}}</td>
-      </tr>
-      <tr>
-        <td>Base TPE</td>
-        <td>{{selectedPitchingArchetype.costBase()}}</td>
-      </tr>
-    </table>
-    <mat-expansion-panel>
-      <mat-expansion-panel-header>
-        <mat-panel-title>
-          <i class="material-icons">
-            info
-          </i> Update Scale
-        </mat-panel-title>
-      </mat-expansion-panel-header>
-      <mat-panel-description>
-      </mat-panel-description>
-      <div class="center aligned">
-        1-40: 1 TPE Per Point<br>
-        40-50: 2 TPE Per Point<br>
-        50-60: 3 TPE Per Point<br>
-        60-70: 4 TPE Per Point<br>
-        70-80: 6 TPE Per Point<br>
-        80-90: 7 TPE Per Point<br>
-        90-115: 8 TPE Per Point<br>
-      </div>
-    </mat-expansion-panel>
-    <mat-expansion-panel
-      expanded="true">
-      <mat-expansion-panel-header>
-        <mat-panel-title>
-          <i class="material-icons">center_focus_weak</i> Pitching Attributes
-        </mat-panel-title>
-      </mat-expansion-panel-header>
-      <mat-panel-description>
-      </mat-panel-description>
-      <div>
-        <label>
-          <select [(ngModel)]="selectedPitchingArchetype">
-            <option *ngFor="let archetype of pitchingArchetypes"
-                    [ngValue]="archetype">
-              {{archetype.name}}
-            </option>
-          </select>
-        </label>
-      </div>
-      <div class="pitchingAttributes">
-        <table class="bordered centered">
-          <thead>
-          <tr>
-            <th>Attribute</th>
-            <th>Min</th>
-            <th>Max</th>
-            <th>Value</th>
-            <th>Cost</th>
-          </tr>
-          </thead>
-          <tbody>
-          <tr *ngFor="let attribute of selectedPitchingArchetype.attributes">
-            <td [ngSwitch]="attribute.name">
+<ul class="tabs center-align " show-delay="250" placement="bottom" tooltip="Click to choose whether you want to be a Pitcher or Batter">
+  <li class="tab col s3 borderlist"><a class="active tabFont" href="#PitcherTable">Pitcher</a></li>
+  <li class="tab col s3 borderlist"><a class="tabFont" href="#BatterTable">Batter</a></li>
+</ul>
+<div id="PitcherTable">
+  <table class="bordered centered" style="padding: 0; margin: 0;">
+    <tr show-delay="250" placement="bottom" tooltip="Variable amount of points you can adjust for your earnings.
+    Everybody starts at 100 TPE" class="">
+      <td>Earned TPE</td>
+      <td><label>
+        <input type="number" [(ngModel)]="earnedPitcherTPE" name="Starting TPE" min="100" max="100">
+      </label></td>
+    </tr>
+    <tr show-delay="250" placement="bottom" tooltip="Assigned points into pitching" class="">
+      <td>Pitching TPE</td>
+      <td>{{selectedPitchingArchetype.costSum()}}</td>
+    </tr>
+    <tr show-delay="250" placement="bottom" tooltip="The points left to spend" class="">
+      <td>TPE Avalaible</td>
+      <td>{{earnedPitcherTPE - selectedPitchingArchetype.costSum()}}</td>
+    </tr>
+    <tr show-delay="250" placement="bottom" tooltip="The TPE that is already assigned to the build. Closers get bonus amount to
+offset the slightly lower amount of innings during the season compared to starters, making them more impactful in those" class="">
+      <td>Base TPE</td>
+      <td>{{selectedPitchingArchetype.costBase()}}</td>
+    </tr>
+  </table>
+  <mat-expansion-panel show-delay="250" placement="bottom" tooltip="The amount of points it costs within range to improve
+   attribute. Velocity has its separate (much more costly) scale." class="">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <i class="material-icons">
+          info
+        </i> Update Scale
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-panel-description>
+    </mat-panel-description>
+    <div class="center aligned">
+      1-40: 1 TPE Per Point<br>
+      40-50: 2 TPE Per Point<br>
+      50-60: 3 TPE Per Point<br>
+      60-70: 4 TPE Per Point<br>
+      70-80: 6 TPE Per Point<br>
+      80-90: 7 TPE Per Point<br>
+      90-115: 8 TPE Per Point<br>
+    </div>
+  </mat-expansion-panel>
+  <mat-expansion-panel
+    expanded="true">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <i class="material-icons">center_focus_weak</i> Pitching Attributes
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-panel-description>
+    </mat-panel-description>
+    <div show-delay="250" placement="bottom" tooltip="First 4 archetypes are closers, latter 4 starters. Choose 1" class="">
+      <label>
+        <select [(ngModel)]="selectedPitchingArchetype">
+          <option *ngFor="let archetype of pitchingArchetypes"
+                  [ngValue]="archetype">
+            {{archetype.name}}
+          </option>
+        </select>
+      </label>
+    </div>
+    <div class="pitchingAttributes">
+      <table class="bordered centered">
+        <thead>
+        <tr show-delay="250" placement="bottom" tooltip="Every attribute has a name, minimum and maximum value and current value" class="">
+          <th>Attribute</th>
+          <th>Min</th>
+          <th>Max</th>
+          <th>Value</th>
+          <th>Cost</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let attribute of selectedPitchingArchetype.attributes"  [tooltip]="attribute.tooltip()" show-delay="250" placement="top">
+          <td [ngSwitch]="attribute.name" >
                 <span *ngSwitchCase="'Pitch 1:'">
 <select class="centered aligned" [(ngModel)]="selectedPitches[0]">
   <option *ngFor="let pitch of pitches"
@@ -195,279 +198,316 @@
     {{pitch}}
   </option>
 </select> </span>
-              <span *ngSwitchCase="'Pitch 2:'">
-                  <select class="centered aligned" [(ngModel)]="selectedPitches[1]">
+            <span *ngSwitchCase="'Pitch 2:'">
+            <select *ngIf="selectedPitchingArchetype === pitchingArchetypes[6];else standardPitch" class="centered aligned"
+                    [(ngModel)]="selectedPitches[1]">
+               <option *ngFor="let pitch of ['Knuckleball']"
+                       [ngValue]="pitch">
+                      {{pitch}}
+                    </option>
+            </select>
+            <ng-template #standardPitch> <select class="centered aligned" [(ngModel)]="selectedPitches[1]">
                     <option *ngFor="let pitch of pitches"
                             [ngValue]="pitch">
                       {{pitch}}
                     </option>
-                  </select></span>
-              <span *ngSwitchCase="'Pitch 3:'">
+                  </select>
+            </ng-template>
+            </span>
+            <span *ngSwitchCase="'Pitch 3:'">
                   <select class="centered aligned" [(ngModel)]="selectedPitches[2]">
                     <option *ngFor="let pitch of pitches"
                             [ngValue]="pitch">
                       {{pitch}}
                     </option>
                   </select></span>
-              <span *ngSwitchCase="'Pitch 4:'">
+            <span *ngSwitchCase="'Pitch 4:'">
                   <select class="centered aligned" [(ngModel)]="selectedPitches[3]">
                     <option *ngFor="let pitch of pitches"
                             [ngValue]="pitch">
                       {{pitch}}
                     </option>
                   </select></span>
-              <span *ngSwitchCase="'Pitch 5:'">
+            <span *ngSwitchCase="'Pitch 5:'">
                   <select class="centered aligned" [(ngModel)]="selectedPitches[4]">
                     <option *ngFor="let pitch of pitches"
                             [ngValue]="pitch">
                       {{pitch}}
                     </option>
                   </select></span>
-              <span *ngSwitchDefault>{{attribute.name}}</span>
-            </td>
-            <td>{{attribute.min}}</td>
-            <td>{{attribute.max}}</td>
-            <td><label>
-              <input type="number" [(ngModel)]="attribute.value" name="attribute.value" min={{attribute.min}}
-                     max={{attribute.max}}>
-            </label></td>
-            <td>{{attribute.cost()}}</td>
-          </tr>
-          <tr>
-            <td>{{selectedPitchingArchetype.velocity.name}}</td>
-            <td>{{selectedPitchingArchetype.velocity.min}}</td>
-            <td>{{selectedPitchingArchetype.velocity.max}}</td>
-            <td>
-              <label>
-                <select class="centered aligned" [(ngModel)]="selectedPitchingArchetype.velocity.value">
-                  <option *ngFor="let velocityValue of velocityValues"
-                          [ngValue]="velocityValue">
-                    {{velocityValue}}
-                  </option>
-                </select>
-              </label></td>
-            <td>{{selectedPitchingArchetype.velocity.cost()}}</td>
-          </tr>
-          </tbody>
-        </table>
-      </div>
-      <table>
-        <tr>
-
-          <div class="bordered center">
-            <button style="width: 50%" class="btn waves-effect waves-navy" (click)="createPitcher()">Create!</button>
-          </div>
+            <span *ngSwitchDefault>{{attribute.name}}</span>
+          </td>
+          <td>{{attribute.min}}</td>
+          <td>{{attribute.max}}</td>
+          <td><label>
+            <input type="number" [(ngModel)]="attribute.value" name="attribute.value" min={{attribute.min}}
+                   max={{attribute.max}}>
+          </label></td>
+          <td>{{attribute.cost()}}</td>
         </tr>
+        <tr show-delay="250" placement="top" tooltip="Affects Stuff rating, that dictates how often pitcher strikes out opponents.
+        Works better with pitches relying on velocity like Fastball, Sinker, Cutter, Splitter, Forkball.">
+          <td>{{selectedPitchingArchetype.velocity.name}}</td>
+          <td>{{selectedPitchingArchetype.velocity.min}}</td>
+          <td>{{selectedPitchingArchetype.velocity.max}}</td>
+          <td>
+            <label>
+              <select class="centered aligned" [(ngModel)]="selectedPitchingArchetype.velocity.value">
+                <option *ngFor="let velocityValue of velocityValues"
+                        [ngValue]="velocityValue">
+                  {{velocityValue}}
+                </option>
+              </select>
+            </label></td>
+          <td>{{selectedPitchingArchetype.velocity.cost()}}</td>
+        </tr>
+        <tr show-delay="250" placement="top" tooltip="Arm slot affects whether you are more effective vs Batters of the same
+or opposite handedness - submarine is the best vs the Same, Over the Top vs opposite.">
+          <td>Arm Slot:</td>
+          <td colspan="4">
+            <select class="centered  aligned" [(ngModel)]="ArmSlot">
+              <option *ngFor="let slot of ['Normal (3/4)', 'Submarine', 'Sidearm', 'Over the top']"
+                      [ngValue]="slot">
+                {{slot}}
+              </option>
+            </select>
+          </td>
+        </tr>
+        </tbody>
       </table>
-    </mat-expansion-panel>
-  </mat-tab>
-  <mat-tab label="Batter">
-    <table class="bordered centered" style="padding: 0; margin: 0;">
+    </div>
+    <table>
       <tr>
-        <td>Earned TPE</td>
-        <td><label>
-          <input type="number" [(ngModel)]="earnedBatterTPE" name="Earned TPE" min="100">
-        </label></td>
-      </tr>
-      <tr>
-        <td>Hitting/Fielding TPE</td>
-        <td>{{selectedHittingArchetype.costSum()}}/{{selectedFieldingArchetype.costSum()}}</td>
-      </tr>
-      <tr>
-        <td>TPE Avalaible</td>
-        <td>{{earnedBatterTPE - selectedFieldingArchetype.costSum() - selectedHittingArchetype.costSum()}}</td>
-      </tr>
-      <tr>
-        <td>Base TPE</td>
-        <td>{{selectedHittingArchetype.costBase()+selectedFieldingArchetype.costBase()}}</td>
+
+        <div class="bordered center" show-delay="250" placement="top" tooltip="Click to complete the process of creating your pitcher!">
+          <button style="width: 50%" class="btn waves-effect waves-navy" (click)="createPitcher()">Create!</button>
+        </div>
       </tr>
     </table>
-    <mat-expansion-panel>
-      <mat-expansion-panel-header>
-        <mat-panel-title>
-          <i class="material-icons">
-            info
-          </i>Update Scale
-        </mat-panel-title>
-      </mat-expansion-panel-header>
-      <mat-panel-description>
-      </mat-panel-description>
-      <div class="center aligned">
-        1-40: 1 TPE Per Point<br>
-        40-50: 2 TPE Per Point<br>
-        50-60: 3 TPE Per Point<br>
-        60-70: 4 TPE Per Point<br>
-        70-80: 6 TPE Per Point<br>
-        80-90: 7 TPE Per Point<br>
-        90-115: 8 TPE Per Point<br>
-      </div>
-    </mat-expansion-panel>
-    <mat-expansion-panel
-      expanded="true">
-      <mat-expansion-panel-header>
-        <mat-panel-title>
-          <i class="material-icons">whatshot</i> Batting Attributes
-        </mat-panel-title>
-      </mat-expansion-panel-header>
-      <mat-panel-description>
-      </mat-panel-description>
-      <div>
-        <label>
-          <select [(ngModel)]="selectedHittingArchetype">
-            <option *ngFor="let archetype of hittingArchetypes"
-                    [ngValue]="archetype">
-              {{archetype.name}}
-            </option>
-          </select>
-        </label>
-      </div>
-      <div class="hittingAttributes">
-        <table class="bordered centered">
-          <thead>
-          <tr>
-            <th>Attribute</th>
-            <th>Min</th>
-            <th>Max</th>
-            <th>Value</th>
-            <th>Cost</th>
-          </tr>
-          </thead>
-          <tbody>
-          <tr *ngFor="let attribute of selectedHittingArchetype.attributes">
-            <td>{{attribute.name}}</td>
-            <td>{{attribute.min}}</td>
-            <td>{{attribute.max}}</td>
-            <td><label>
-              <input type="number" [(ngModel)]="attribute.value" name="attribute.value" min={{attribute.min}}
-                     max={{attribute.max}}>
-            </label></td>
-            <td>{{attribute.cost()}}</td>
-          </tr>
-          </tbody>
-        </table>
-      </div>
-    </mat-expansion-panel>
-    <mat-expansion-panel
-      expanded="true">
-      <mat-expansion-panel-header>
-        <mat-panel-title>
-          <i class="material-icons">edit</i> Fielding Attributes
-        </mat-panel-title>
-      </mat-expansion-panel-header>
-      <mat-panel-description>
-      </mat-panel-description>
-      <div>
-        <label>
-          <select [(ngModel)]="selectedFieldingArchetype">
-            <option *ngFor="let archetype of fieldingArchetypes"
-                    [ngValue]="archetype">
-              {{archetype.name}}
-            </option>
-          </select>
-        </label>
-      </div>
-      <div class="hittingAttributes">
-        <table class="bordered centered">
-          <thead>
-          <tr>
-            <th>Attribute</th>
-            <th>Min</th>
-            <th>Max</th>
-            <th>Value</th>
-            <th>Cost</th>
-          </tr>
-          </thead>
-          <tbody>
-          <tr *ngFor="let attribute of selectedFieldingArchetype.attributes">
-            <td>{{attribute.name}}</td>
-            <td>{{attribute.min}}</td>
-            <td>{{attribute.max}}</td>
-            <td><label>
-              <input type="number" [(ngModel)]="attribute.value" name="attribute.value" min={{attribute.min}}
-                     max={{attribute.max}}>
-            </label></td>
-            <td>{{attribute.cost()}}</td>
-          </tr>
-          </tbody>
-        </table>
-        <table class="bordered centered" style="padding: 0; margin: 0;">
-          <tr>
-            <td>Bats:</td>
-            <select class="centered aligned" [(ngModel)]="Bats">
-              <option *ngFor="let BatsHand of ['Left', 'Right', 'Switch']"
-                      [ngValue]="BatsHand">
-                {{BatsHand}}
-              </option>
-            </select>
-          </tr>
-          <tr>
-            <td>Hitting Type:</td>
-            <select class="centered aligned" [(ngModel)]="Hitting">
-              <option *ngFor="let HittingType of ['Normal', 'Pull', 'Extreme Pull', 'Spray']"
-                      [ngValue]="HittingType">
-                {{HittingType}}
-              </option>
-            </select>
-          </tr>
-          <tr>
-            <td>Main Position (200/200 EXP)</td>
-            <select class="centered aligned" [(ngModel)]="SelectedPosition" required>
-              <option *ngFor="let position of positions"
-                      [ngValue]="position">
-                {{position}}
-              </option>
-            </select>
-          </tr>
-          <tr>
-            <td>Secondary Position (150/200 EXP)</td>
-            <select class="centered aligned" [(ngModel)]="Selected2Position" required>
-              <option *ngFor="let position of positions"
-                      [ngValue]="">
-                {{position}}
-              </option>
-            </select>
-          </tr>
-          <tr>
-            <td>Tertiary Position (100/200 EXP)</td>
-            <select class="centered aligned" [(ngModel)]="Selected3Position" required>
-              <option *ngFor="let position of positions"
-                      [ngValue]="">
-                {{position}}
-              </option>
-            </select>
-          </tr>
+  </mat-expansion-panel>
+</div>
 
-          <tr *ngIf="selectedFieldingArchetype === fieldingArchetypes[6]">
-            <td>Fourth Position (100/200 EXP)</td>
-            <select class="centered aligned" [(ngModel)]="Selected4Position" required>
-              <option *ngFor="let position of positions"
-                      [ngValue]="">
-                {{position}}
-              </option>
-            </select>
-          </tr>
-
-          <tr *ngIf="selectedFieldingArchetype === fieldingArchetypes[6]">
-            <td>Fifth Position (100/200 EXP)</td>
-            <select class="centered aligned" [(ngModel)]="Selected5Position" required>
-              <option *ngFor="let position of positions"
-                      [ngValue]="">
-                {{position}}
-              </option>
-            </select>
-          </tr>
-        </table>
-      </div>
-      <table>
+<div id="BatterTable">
+  <table class="bordered centered" style="padding: 0; margin: 0;">
+    <tr show-delay="250" placement="bottom" tooltip="Variable amount of points you can adjust for your earnings.
+    Everybody starts at 100 TPE - Unless you are DH you have
+to spent initial 100 spread out between hitting and fielding with 50 in each. If you are DH Archetype you need to spent
+100 TPE in batting">
+      <td>Earned TPE</td>
+      <td><label>
+        <input type="number" [(ngModel)]="earnedBatterTPE" name="Earned TPE" min="100">
+      </label></td>
+    </tr>
+    <tr show-delay="250" placement="bottom" tooltip="Shows the TPE you already spent in batting/fielding. Unless you are DH you have
+to spent initial 100 spread out between hitting and fielding with 50 in each. If you are DH Archetype you need to spent
+100 TPE in batting">
+      <td>Hitting/Fielding TPE</td>
+      <td>{{selectedHittingArchetype.costSum()}}/{{selectedFieldingArchetype.costSum()}}</td>
+    </tr>
+    <tr show-delay="250" placement="bottom" tooltip="The points left to spent. Has to be 0 to complete player creation.">
+      <td>TPE Avalaible</td>
+      <td>{{earnedBatterTPE - selectedFieldingArchetype.costSum() - selectedHittingArchetype.costSum()}}</td>
+    </tr>
+    <tr show-delay="250" placement="bottom" tooltip="The TPE that is already assigned to the build. Some archetypes e.g. DH have
+slightly lower value to adjust other benefit like being able to spent initial pool entirely on batting." >
+      <td>Base TPE</td>
+      <td>{{selectedHittingArchetype.costBase() + selectedFieldingArchetype.costBase()}}</td>
+    </tr>
+  </table>
+  <mat-expansion-panel show-delay="250" placement="bottom" tooltip="The scale that dictates how much it costs
+  to improve player in every range">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <i class="material-icons">
+          info
+        </i>Update Scale
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-panel-description>
+    </mat-panel-description>
+    <div class="center aligned">
+      1-40: 1 TPE Per Point<br>
+      40-50: 2 TPE Per Point<br>
+      50-60: 3 TPE Per Point<br>
+      60-70: 4 TPE Per Point<br>
+      70-80: 6 TPE Per Point<br>
+      80-90: 7 TPE Per Point<br>
+      90-115: 8 TPE Per Point<br>
+    </div>
+  </mat-expansion-panel>
+  <mat-expansion-panel
+    expanded="true">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <i class="material-icons">whatshot</i> Batting Attributes
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-panel-description>
+    </mat-panel-description>
+    <div show-delay="250" placement="bottom" tooltip="Select Batting Artchetype that will determine your player identity
+and minimum and maximum caps for every attribute.">
+      <label>
+        <select [(ngModel)]="selectedHittingArchetype">
+          <option *ngFor="let archetype of hittingArchetypes"
+                  [ngValue]="archetype">
+            {{archetype.name}}
+          </option>
+        </select>
+      </label>
+    </div>
+    <div class="hittingAttributes">
+      <table class="bordered centered">
+        <thead>
         <tr>
-          <div class="bordered center">
-            <button style="width: 50%" class="btn waves-effect waves-navy" (click)="createBatter()">Create!</button>
-          </div>
+          <th>Attribute</th>
+          <th>Min</th>
+          <th>Max</th>
+          <th>Value</th>
+          <th>Cost</th>
         </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let attribute of selectedHittingArchetype.attributes" show-delay="250" placement="bottom"
+            [tooltip]="attribute.tooltip()">
+          <td>{{attribute.name}}</td>
+          <td>{{attribute.min}}</td>
+          <td>{{attribute.max}}</td>
+          <td><label>
+            <input type="number" [(ngModel)]="attribute.value" name="attribute.value" min={{attribute.min}}
+                   max={{attribute.max}}>
+          </label></td>
+          <td>{{attribute.cost()}}</td>
+        </tr>
+        </tbody>
       </table>
-    </mat-expansion-panel>
-  </mat-tab>
-</mat-tab-group>
+    </div>
+  </mat-expansion-panel>
+  <mat-expansion-panel
+    expanded="true">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <i class="material-icons">edit</i> Fielding Attributes
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-panel-description>
+    </mat-panel-description>
+    <div show-delay="250" placement="bottom" tooltip="Select one of the fielding artchetypes. Every archetpe allows you
+to get basic experience at 3 positions, but Utility one which gives you 5, but at the cost of lowered base TPE.">
+      <label>
+        <select [(ngModel)]="selectedFieldingArchetype">
+          <option *ngFor="let archetype of fieldingArchetypes"
+                  [ngValue]="archetype">
+            {{archetype.name}}
+          </option>
+        </select>
+      </label>
+    </div>
+    <div class="hittingAttributes">
+      <table class="bordered centered">
+        <thead>
+        <tr>
+          <th>Attribute</th>
+          <th>Min</th>
+          <th>Max</th>
+          <th>Value</th>
+          <th>Cost</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let attribute of selectedFieldingArchetype.attributes" show-delay="250" placement="bottom"
+            [tooltip]="attribute.tooltip()">
+          <td>{{attribute.name}}</td>
+          <td>{{attribute.min}}</td>
+          <td>{{attribute.max}}</td>
+          <td><label>
+            <input type="number" [(ngModel)]="attribute.value" name="attribute.value" min={{attribute.min}}
+                   max={{attribute.max}}>
+          </label></td>
+          <td>{{attribute.cost()}}</td>
+        </tr>
+
+        <tr show-delay="250" placement="bottom" tooltip="Select your batter handedness">
+          <td>Bats:</td>
+          <td colspan="4"><select class="centered aligned" [(ngModel)]="Bats">
+            <option *ngFor="let BatsHand of ['Left', 'Right', 'Switch']"
+                    [ngValue]="BatsHand">
+              {{BatsHand}}
+            </option>
+          </select>
+          </td>
+        </tr>
+        <tr show-delay="250" placement="top"  tooltip="Select your batter hitting type. It affects the placement of your hits.">
+          <td>Hitting Type:</td>
+          <td colspan="4"><select class="centered aligned" [(ngModel)]="Hitting">
+            <option *ngFor="let HittingType of ['Normal', 'Pull', 'Extreme Pull', 'Spray']"
+                    [ngValue]="HittingType">
+              {{HittingType}}
+            </option>
+          </select></td>
+        </tr>
+        <tr show-delay="250" placement="top"  tooltip="Select your main position. It's the same as the one selected in Position field">
+          <td>Main Position (200/200 EXP)</td>
+          <td colspan="4"><select class="centered aligned" [(ngModel)]="SelectedPosition" required>
+            <option *ngFor="let position of positions"
+                    [ngValue]="position">
+              {{position}}
+            </option>
+          </select></td>
+        </tr>
+        <tr show-delay="250" placement="top"  tooltip="Select your secondary fielding position your player will be able to play">
+          <td>Secondary Position (150/200 EXP)</td>
+          <td colspan="4"><select class="centered aligned" [(ngModel)]="Selected2Position" required>
+            <option *ngFor="let position of positions"
+                    [ngValue]="">
+              {{position}}
+            </option>
+          </select></td>
+        </tr>
+        <tr show-delay="250" placement="top"  tooltip="Select your tertiary fielding position your player will be able to play">
+          <td>Tertiary Position (100/200 EXP)</td>
+          <td colspan="4"><select class="centered aligned" [(ngModel)]="Selected3Position" required>
+            <option *ngFor="let position of positions"
+                    [ngValue]="">
+              {{position}}
+            </option>
+          </select></td>
+        </tr>
+
+        <tr *ngIf="selectedFieldingArchetype === fieldingArchetypes[6]"
+            show-delay="250" placement="top" tooltip="Select your fourth fielding position your player will be able to play">
+          <td>Fourth Position (100/200 EXP)</td>
+          <td colspan="4"><select class="centered aligned" [(ngModel)]="Selected4Position" required>
+            <option *ngFor="let position of positions"
+                    [ngValue]="">
+              {{position}}
+            </option>
+          </select></td>
+        </tr>
+
+        <tr *ngIf="selectedFieldingArchetype === fieldingArchetypes[6]"
+            show-delay="250" placement="top" tooltip="Select your fifth fielding position your player will be able to play">
+          <td>Fifth Position (100/200 EXP)</td>
+          <td colspan="4"><select class="centered aligned" [(ngModel)]="Selected5Position" required>
+            <option *ngFor="let position of positions"
+                    [ngValue]="">
+              {{position}}
+            </option>
+          </select></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <table>
+      <tr>
+        <div class="bordered center">
+          <button style="width: 50%" class="btn waves-effect waves-navy" (click)="createBatter()"
+                  show-delay="250" placement="top" tooltip="Click to finish the process of creating your batter!">Create!</button>
+        </div>
+      </tr>
+    </table>
+  </mat-expansion-panel>
+</div>
+
 
 
 

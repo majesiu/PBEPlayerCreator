@@ -9,7 +9,7 @@
           "max": "100"
         },
         {
-          "name": "Movement vs LHB:",
+          "name": "Movement vs. LHB:",
           "min": 50,
           "max": 95
         },
@@ -74,7 +74,7 @@
           "max": "96 - 98"
         },
         {
-          "name": "Movement vs LHB:",
+          "name": "Movement vs. LHB:",
           "min": 50,
           "max": 95
         },
@@ -139,7 +139,7 @@
           "max": "93 - 95"
         },
         {
-          "name": "Movement vs LHB:",
+          "name": "Movement vs. LHB:",
           "min": 50,
           "max": 95
         },
@@ -204,7 +204,7 @@
           "max": "95 - 97"
         },
         {
-          "name": "Movement vs LHB:",
+          "name": "Movement vs. LHB:",
           "min": 50,
           "max": 95
         },
@@ -269,7 +269,7 @@
           "max": "98 - 100"
         },
         {
-          "name": "Movement vs LHB:",
+          "name": "Movement vs. LHB:",
           "min": 30,
           "max": 90
         },
@@ -334,7 +334,7 @@
           "max": "92 - 94"
         },
         {
-          "name": "Movement vs LHB:",
+          "name": "Movement vs. LHB:",
           "min": 40,
           "max": 90
         },
@@ -399,7 +399,7 @@
           "max": "91 - 93"
         },
         {
-          "name": "Movement vs LHB:",
+          "name": "Movement vs. LHB:",
           "min": 30,
           "max": 90
         },
@@ -464,7 +464,7 @@
           "max": "95 - 97"
         },
         {
-          "name": "Movement vs LHB:",
+          "name": "Movement vs. LHB:",
           "min": 40,
           "max": 90
         },

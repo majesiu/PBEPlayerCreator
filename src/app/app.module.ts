@@ -14,7 +14,7 @@ import { TradeMachineComponent } from './trade-machine/trade-machine.component';
 import { PlayerFormComponent } from './player-form/player-form.component';
 import { AppRoutingModule } from './app-routing.module';
 import {MatNativeDateModule} from '@angular/material';
-
+import { TooltipModule } from 'ng2-tooltip-directive';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +33,8 @@ import {MatNativeDateModule} from '@angular/material';
     MatDatepickerModule,
     MatNativeDateModule,
     MatButtonModule,
-    AppRoutingModule
+    AppRoutingModule,
+    TooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]

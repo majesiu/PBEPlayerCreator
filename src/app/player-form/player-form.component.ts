@@ -44,7 +44,8 @@ export class PlayerFormComponent implements OnInit {
   selectedPitches = ['Pitch 1', 'Pitch 2', 'Pitch 3', 'Pitch 4', 'Pitch 5'];
   pitches = ['Fastball', 'Sinker', 'Cutter', 'Curveball', 'Slider', 'Changeup', 'Splitter', 'Forkball', 'Circle Change',
     'Screwball', 'Knuckle Curve'];
-  positions = ['CL', 'SP', 'C', '1B', '2B', '3B', 'SS', 'LF', 'CF', 'RF'];
+  positions = ['Closer', 'Starting Pitcher', 'Catcher', 'First Baseman', 'Second Baseman', 'Third Baseman', 'Shortstop',
+    'Left Fielder', 'Center Fielder', 'Right Fielder'];
   startDate = new Date(2007, 0, 1);
   public velocityValues = ['80 - 83',
     '83 - 85',
@@ -92,8 +93,8 @@ export class PlayerFormComponent implements OnInit {
   Selected2Position: any;
   Selected3Position: any;
   Selected4Position: any;
-  Selected5Position: any;
-  batterText = 'Form';
+  Selected5Position: any; 
+  ArmSlot: any;
 
   ngOnInit() {
 
@@ -214,7 +215,7 @@ export class PlayerFormComponent implements OnInit {
 
   }
 
-  createPitcher() { 
+  createPitcher() {
     let formString = '[color=red][u][b]Player Information[/b][/u][/color]';
     if (this.Username === '') {
       return alert('Please input the Username');
@@ -265,12 +266,17 @@ export class PlayerFormComponent implements OnInit {
       formString += '\n(MIN: ' + att.min + ') (MAX: ' + att.max + ') '
         + att.name + ' ' + att.value;
     }
+    if (!this.ArmSlot || this.ArmSlot.length === 0) {
+      return alert('Please select your arm slot');
+    }
+    formString += '\nArm Slot: ' + this.ArmSlot;
     if (this.selectedPitches[0].startsWith('Pitch') || this.selectedPitches[1].startsWith('Pitch') ||
       this.selectedPitches[2].startsWith('Pitch') ) {
       return alert('Please select your 3 starting pitches');
     }
-    formString += '\nPitches: ' + this.selectedPitches[0] + ', ' + this.selectedPitches[1] + ', '
-      + this.selectedPitches[2] + ', ' + this.selectedPitches[3];
+    formString += '\n\nPitches: ' + this.selectedPitches[0] + ', ' + this.selectedPitches[1] + ', '
+      + this.selectedPitches[2] + ', ' + (this.selectedPitches[3] !== 'Pitch 4' ? this.selectedPitches[3] + ', ' : ' ')
+      + (this.selectedPitches[4] !== 'Pitch 5' ? this.selectedPitches[4] : ' ');
 
     this.copyStringToClipboard(formString);
     alert('New thread on forums will open up - template was copied into clipboard, paste it there and create the thread');
