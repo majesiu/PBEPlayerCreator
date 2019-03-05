@@ -262,6 +262,9 @@ export class PlayerFormComponent implements OnInit {
       return alert('You have to spent exactly 100 of your initial TPE');
     }
     formString += '\n[b]Player Archetype:[/b] ' + this.selectedPitchingArchetype.name;
+    formString += '\n(MIN: ' + this.selectedPitchingArchetype.velocity.min + ') (MAX: ' +
+      this.selectedPitchingArchetype.velocity.max + ') ' + this.selectedPitchingArchetype.velocity.name + ' ' +
+      this.selectedPitchingArchetype.velocity.value;
     for (const att of this.selectedPitchingArchetype.attributes) {
       formString += '\n(MIN: ' + att.min + ') (MAX: ' + att.max + ') '
         + att.name + ' ' + att.value;
