@@ -62,13 +62,13 @@
       <input type="text" [(ngModel)]="College" placeholder="College/High School">
     </label></td>
   </tr>
-  <tr show-delay="250" placement="bottom" tooltip="The date in the sim, league is currently in year 2026" class="">
+  <tr show-delay="250" placement="bottom" tooltip="The date in the sim, league is currently in year 2029 (S13)" class="">
     <td style="font-weight: bold;">Birthdate</td>
     <td><label>
       <input type="text" [(ngModel)]="Birthdate" placeholder="Birthdate" required>
     </label></td>
   </tr>
-  <tr show-delay="250" placement="bottom" tooltip="Throwing Hand, also important for fielding" class="">
+  <tr show-delay="250" placement="bottom" tooltip="Throwing Hand, also important for fielding (Lefties get penalized as 2B/3B/SS)" class="">
     <td style="font-weight: bold;">Throws</td>
     <td><label>
       <select class="centered aligned" [(ngModel)]="Throws" required>
@@ -86,7 +86,7 @@
     </label></td>
   </tr>
   <tr show-delay="250" placement="bottom" tooltip="The weight of your player, affects only First Base Defence" class="">
-    <td style="font-weight: bold;">Height: (MIN: 5'8" / MAX: 6'8")</td>
+    <td style="font-weight: bold;">Height: (MIN: 5'8" / MAX: 6'4")</td>
     <td><label>
       <input type="text" [(ngModel)]="Height" placeholder="Height" required>
     </label></td>
