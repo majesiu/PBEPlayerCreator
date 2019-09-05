@@ -5,6 +5,7 @@ import PitchingArtchetypes from '../../assets/PitchingArchetypes.json';
 import {Archetype} from '../player-calc/archetype';
 import {PitchingArchetype} from '../player-calc/pitching-archetype';
 import {Velocity} from '../player-calc/velocity';
+import * as clipboard from "clipboard-polyfill";
 
 @Component({
   selector: 'app-player-form',
@@ -93,29 +94,11 @@ export class PlayerFormComponent implements OnInit {
   Selected2Position: any;
   Selected3Position: any;
   Selected4Position: any;
-  Selected5Position: any; 
+  Selected5Position: any;
   ArmSlot: any;
 
   ngOnInit() {
 
-  }
-
-  copyStringToClipboard(str) {
-    // Create new element
-    const el = document.createElement('textarea');
-    // Set value (string to be copied)
-    el.value = str;
-    // Set non-editable to avoid focus and move outside of view
-    el.setAttribute('readonly', '');
-    // @ts-ignore
-    el.style = {position: 'absolute', left: '-9999px'};
-    document.body.appendChild(el);
-    // Select text inside element
-    el.select();
-    // Copy text to clipboard
-    document.execCommand('copy');
-    // Remove temporary element
-    document.body.removeChild(el);
   }
 
   createBatter() {
@@ -145,11 +128,11 @@ export class PlayerFormComponent implements OnInit {
       return alert('Please input the Birthdate of your player');
     }
     formString += '\n[b]Birthdate:[/b] ' + this.Birthdate;
-    if (this.Throws.length === 0) {
+    if (!this.Throws) {
       return alert('Please select the Throwing Hand');
     }
     formString += '\n[b]Throws:[/b] ' + this.Throws;
-    if (this.Bats.length === 0) {
+    if (!this.Bats || this.Bats === '') {
       return alert('Please input the Batting Hand');
     }
     formString += '\n[b]Bats:[/b] ' + this.Bats;
@@ -164,7 +147,8 @@ export class PlayerFormComponent implements OnInit {
     formString += '\n[b]Weight:[/b] ' + this.Weight;
     formString += '\n[b]Birthplace:[/b] ' + this.Birthplace;
     formString += '\n[b]Discord name:[/b] ' + this.Discord;
-    if (this.Hitting === '') {
+    console.log(this.Hitting);
+    if (!this.Hitting || this.Hitting === '') {
       return alert('Please input the Hitting Type');
     }
     formString += '\n[b]Hitting:[/b] ' + this.Hitting;
@@ -187,31 +171,33 @@ export class PlayerFormComponent implements OnInit {
       formString += '\n(MIN: ' + att.min + ') (MAX: ' + att.max + ') '
         + att.name + ' ' + att.value;
     }
-    if (this.SelectedPosition.length === 0) {
+    if (!this.SelectedPosition || this.SelectedPosition.length === 0) {
       return alert('Please input the Main Position');
     }
     formString += '\n1st Position (200/200 experience): ' + this.SelectedPosition;
-    if (this.SelectedPosition.length === 0) {
+    if (!this.Selected2Position || this.Selected2Position.length === 0) {
       return alert('Please input the Secondary Position');
     }
     formString += '\n2nd Position (150/200 experience): ' + this.Selected2Position;
-    if (this.SelectedPosition.length === 0) {
+    if (!this.Selected3Position || this.Selected3Position.length === 0) {
       return alert('Please input the Tertiary Position');
     }
     formString += '\n3rd Position (100/200 experience): ' + this.Selected3Position;
     if (this.selectedFieldingArchetype === this.fieldingArchetypes[6]) {
-      if (this.SelectedPosition.length === 0) {
+      if (!this.Selected4Position || this.Selected4Position.length === 0) {
         return alert('Please input the 4th Position');
       }
       formString += '\n4th Position (100/200 experience): ' + this.Selected4Position;
-      if (this.SelectedPosition.length === 0) {
+      if (!this.Selected5Position || this.Selected5Position.length === 0) {
         return alert('Please input the 5th Position');
       }
       formString += '\n5th Position (100/200 experience): ' + this.Selected5Position;
     }
-    this.copyStringToClipboard(formString);
-    alert('New thread on forums will open up - template was copied into clipboard, paste it there and create the thread');
-    window.open('http://probaseballexperience.jcink.net/index.php?act=Post&CODE=00&f=2');
+    
+    clipboard.writeText(formString).then( _ => { 
+      alert('New thread on forums will open up - template was copied into clipboard, paste it there and create the thread');
+      window.open('http://probaseballexperience.jcink.net/index.php?act=Post&CODE=00&f=2');
+    });
 
   }
 
@@ -281,9 +267,10 @@ export class PlayerFormComponent implements OnInit {
       + this.selectedPitches[2] + ', ' + (this.selectedPitches[3] !== 'Pitch 4' ? this.selectedPitches[3] + ', ' : ' ')
       + (this.selectedPitches[4] !== 'Pitch 5' ? this.selectedPitches[4] : ' ');
 
-    this.copyStringToClipboard(formString);
-    alert('New thread on forums will open up - template was copied into clipboard, paste it there and create the thread');
-    window.open('http://probaseballexperience.jcink.net/index.php?act=Post&CODE=00&f=2');
+    clipboard.writeText(formString).then( _ => { 
+      alert('New thread on forums will open up - template was copied into clipboard, paste it there and create the thread');
+      window.open('http://probaseballexperience.jcink.net/index.php?act=Post&CODE=00&f=2');
+    });
 
   }
 

@@ -454,7 +454,7 @@ to get basic experience at 3 positions, but Utility one which gives you 5, but a
             </option>
           </select></td>
         </tr>
-        <tr show-delay="250" placement="top"  tooltip="Select your secondary fielding position your player will be able to play">
+        <tr show-delay="250" placement="top"  tooltip="Select your secondary fielding position your player will be able to play. You can only select each position once.">
           <td>Secondary Position (150/200 EXP)</td>
           <td colspan="4"><select class="centered aligned" [(ngModel)]="Selected2Position" required>
             <option *ngFor="let position of positions"
@@ -463,7 +463,7 @@ to get basic experience at 3 positions, but Utility one which gives you 5, but a
             </option>
           </select></td>
         </tr>
-        <tr show-delay="250" placement="top"  tooltip="Select your tertiary fielding position your player will be able to play">
+        <tr show-delay="250" placement="top"  tooltip="Select your tertiary fielding position your player will be able to play. You can only select each position once.">
           <td>Tertiary Position (100/200 EXP)</td>
           <td colspan="4"><select class="centered aligned" [(ngModel)]="Selected3Position" required>
             <option *ngFor="let position of positions"
@@ -474,7 +474,7 @@ to get basic experience at 3 positions, but Utility one which gives you 5, but a
         </tr>
 
         <tr *ngIf="selectedFieldingArchetype === fieldingArchetypes[6]"
-            show-delay="250" placement="top" tooltip="Select your fourth fielding position your player will be able to play">
+            show-delay="250" placement="top" tooltip="Select your fourth fielding position your player will be able to play. You can only select each position once.">
           <td>Fourth Position (100/200 EXP)</td>
           <td colspan="4"><select class="centered aligned" [(ngModel)]="Selected4Position" required>
             <option *ngFor="let position of positions"
@@ -485,7 +485,7 @@ to get basic experience at 3 positions, but Utility one which gives you 5, but a
         </tr>
 
         <tr *ngIf="selectedFieldingArchetype === fieldingArchetypes[6]"
-            show-delay="250" placement="top" tooltip="Select your fifth fielding position your player will be able to play">
+            show-delay="250" placement="top" tooltip="Select your fifth fielding position your player will be able to play. You can only select each position once.">
           <td>Fifth Position (100/200 EXP)</td>
           <td colspan="4"><select class="centered aligned" [(ngModel)]="Selected5Position" required>
             <option *ngFor="let position of positions"
