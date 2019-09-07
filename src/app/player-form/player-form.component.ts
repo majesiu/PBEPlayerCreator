@@ -171,26 +171,51 @@ export class PlayerFormComponent implements OnInit {
       formString += '\n(MIN: ' + att.min + ') (MAX: ' + att.max + ') '
         + att.name + ' ' + att.value;
     }
+    let uniquePositions = [];
     if (!this.SelectedPosition || this.SelectedPosition.length === 0) {
       return alert('Please input the Main Position');
     }
     formString += '\n1st Position (200/200 experience): ' + this.SelectedPosition;
+    uniquePositions.push(this.SelectedPosition);
     if (!this.Selected2Position || this.Selected2Position.length === 0) {
       return alert('Please input the Secondary Position');
     }
+    if (uniquePositions.includes(this.Selected2Position)){
+      return alert(`You already selected ${this.Selected2Position}, please select another position.`);
+    }
+    uniquePositions.push(this.Selected2Position);
     formString += '\n2nd Position (150/200 experience): ' + this.Selected2Position;
     if (!this.Selected3Position || this.Selected3Position.length === 0) {
       return alert('Please input the Tertiary Position');
     }
+    if (uniquePositions.includes(this.Selected3Position)){
+      return alert(`You already selected ${this.Selected3Position}, please select another position.`);
+    }
+    uniquePositions.push(this.Selected3Position);
     formString += '\n3rd Position (100/200 experience): ' + this.Selected3Position;
+    
+    if (['Starting Pitcher', 'Closer'].includes(this.SelectedPosition) || ['Starting Pitcher', 'Closer'].includes(this.Selected2Position) || ['Starting Pitcher', 'Closer'].includes(this.Selected3Position)) {
+      return alert('You can\'t select either Closer or Starting Pitcher as position for batter, please choose another');
+    }
     if (this.selectedFieldingArchetype === this.fieldingArchetypes[6]) {
       if (!this.Selected4Position || this.Selected4Position.length === 0) {
         return alert('Please input the 4th Position');
       }
+      if (uniquePositions.includes(this.Selected4Position)){
+        return alert(`You already selected ${this.Selected4Position}, please select another position.`);
+      }
+      uniquePositions.push(this.Selected4Position);
       formString += '\n4th Position (100/200 experience): ' + this.Selected4Position;
       if (!this.Selected5Position || this.Selected5Position.length === 0) {
         return alert('Please input the 5th Position');
       }
+      if (['Starting Pitcher', 'Closer'].includes(this.Selected4Position) || ['Starting Pitcher', 'Closer'].includes(this.Selected5Position)) {
+        return alert('You can\'t select either Closer or Starting Pitcher as position for batter, please choose another');
+      }
+      if (uniquePositions.includes(this.Selected5Position)){
+        return alert(`You already selected ${this.Selected5Position}, please select another position.`);
+      }
+      uniquePositions.push(this.Selected5Position);
       formString += '\n5th Position (100/200 experience): ' + this.Selected5Position;
     }
     
@@ -221,6 +246,9 @@ export class PlayerFormComponent implements OnInit {
     formString += '\n[b]Number:[/b] ' + this.Number;
     if (this.SelectedPosition.length === 0) {
       return alert('Please Select the Position');
+    }
+    if (!['Starting Pitcher', 'Closer'].includes(this.SelectedPosition)) {
+      return alert('You have to select either Closer or Starting Pitcher as position for pitcher');
     }
     formString += '\n[b]Position:[/b] ' + this.SelectedPosition;
     formString += '\n[b]College:[/b] ' + this.College;
@@ -262,6 +290,22 @@ export class PlayerFormComponent implements OnInit {
     if (this.selectedPitches[0].startsWith('Pitch') || this.selectedPitches[1].startsWith('Pitch') ||
       this.selectedPitches[2].startsWith('Pitch') ) {
       return alert('Please select your 3 starting pitches');
+    }
+    let uniquePitches = [this.selectedPitches[0]];
+    if (uniquePitches.includes(this.selectedPitches[1])){
+      return alert(`You already selected ${this.selectedPitches[1]}, please select another pitch.`);
+    }
+    uniquePitches.push(this.selectedPitches[1]);
+    if (uniquePitches.includes(this.selectedPitches[2])){
+      return alert(`You already selected ${this.selectedPitches[2]}, please select another pitch.`);
+    }
+    uniquePitches.push(this.selectedPitches[2]);
+    if (this.selectedPitches[3] !== 'Pitch 4' && uniquePitches.includes(this.selectedPitches[3])){
+      return alert(`You already selected ${this.selectedPitches[3]}, please select another pitch.`);
+    }
+    uniquePitches.push(this.selectedPitches[3]);
+    if (this.selectedPitches[4] !== 'Pitch 5' && uniquePitches.includes(this.selectedPitches[4])){
+      return alert(`You already selected ${this.selectedPitches[4]}, please select another pitch.`);
     }
     formString += '\n\nPitches: ' + this.selectedPitches[0] + ', ' + this.selectedPitches[1] + ', '
       + this.selectedPitches[2] + ', ' + (this.selectedPitches[3] !== 'Pitch 4' ? this.selectedPitches[3] + ', ' : ' ')
