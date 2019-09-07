@@ -10,7 +10,6 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatButtonModule} from '@angular/material/button';
 import { AppComponent } from './app.component';
 import { PlayerCalcComponent } from './player-calc/player-calc.component';
-import { TradeMachineComponent } from './trade-machine/trade-machine.component';
 import { PlayerFormComponent } from './player-form/player-form.component';
 import { AppRoutingModule } from './app-routing.module';
 import {MatNativeDateModule} from '@angular/material';
@@ -19,7 +18,6 @@ import { TooltipModule } from 'ng2-tooltip-directive';
   declarations: [
     AppComponent,
     PlayerCalcComponent,
-    TradeMachineComponent,
     PlayerFormComponent
   ],
   imports: [
