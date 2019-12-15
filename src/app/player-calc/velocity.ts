@@ -13,23 +13,23 @@ export class Velocity {
   }
 
   /*80 - 83 Cost for next level: 30 TPE
-  83 - 85 Cost for next level: 30 TPE
-  84 - 86 Cost for next level: 30 TPE
-  85 - 87 Cost for next level: 30 TPE
-  86 - 88 Cost for next level: 30 TPE
-  87 - 89 Cost for next level: 30 TPE
-  88 - 90 Cost for next level: 30 TPE
-  89 - 91 Cost for next level: 50 TPE
-  90 - 92 Cost for next level: 50 TPE
-  91 - 93 Cost for next level: 50 TPE
-  92 - 94 Cost for next level: 50 TPE
-  93 - 95 Cost for next level: 50 TPE
-  94 - 96 Cost for next level: 50 TPE
-  95 - 97 Cost for next level: 75 TPE
-  96 - 98 Cost for next level: 75 TPE
-  97 - 99 Cost for next level: 75 TPE
-  98 - 100 Cost for next level: 75 TPE
-  99 - 101 Cost for next level: 75 TPE
+83 - 85 Cost for next level: 30 TPE
+84 - 86 Cost for next level: 30 TPE
+85 - 87 Cost for next level: 30 TPE
+86 - 88 Cost for next level: 30 TPE
+87 - 89 Cost for next level: 30 TPE
+88 - 90 Cost for next level: 30 TPE
+89 - 91 Cost for next level: 50 TPE->(40)
+90 - 92 Cost for next level: 50 TPE->(40)
+91 - 93 Cost for next level: 50 TPE->(40)
+92 - 94 Cost for next level: 50 TPE->(40)
+93 - 95 Cost for next level: 50 TPE->(40)
+94 - 96 Cost for next level: 50 TPE->(40)
+95 - 97 Cost for next level: 75 TPE->(50)
+96 - 98 Cost for next level: 75 TPE->(50)
+97 - 99 Cost for next level: 75 TPE->(50)
+98 - 100 Cost for next level: 75 TPE->(50)
+99 - 101 Cost for next level: 75 TPE->(50)
   100+ Max level*/
   private static veloValue(velo: String): number {
     switch (velo) {
@@ -58,37 +58,37 @@ export class Velocity {
         return 210;
         break;
       case '90 - 92':
-        return 260;
+        return 250;
         break;
       case '91 - 93':
-        return 310;
+        return 290;
         break;
       case '92 - 94':
-        return 360;
+        return 330;
         break;
       case '93 - 95':
-        return 410;
+        return 370;
         break;
       case '94 - 96':
-        return 460;
+        return 410;
         break;
       case '95 - 97':
-        return 510;
+        return 450;
         break;
       case '96 - 98':
-        return 585;
+        return 500;
         break;
       case '97 - 99':
-        return 660;
+        return 550;
         break;
       case '98 - 100':
-        return 735;
+        return 600;
         break;
       case '99 - 101':
-        return 810;
+        return 650;
         break;
       case '100':
-        return 885;
+        return 700;
         break;
     }
   }

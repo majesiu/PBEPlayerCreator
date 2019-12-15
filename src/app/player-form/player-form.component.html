@@ -192,14 +192,7 @@ offset the slightly lower amount of innings during the season compared to starte
         <tr *ngFor="let attribute of selectedPitchingArchetype.attributes"  [tooltip]="attribute.tooltip()" show-delay="250" placement="top">
           <td [ngSwitch]="attribute.name" >
                 <span *ngSwitchCase="'Pitch 1:'">
-<select class="centered aligned" [(ngModel)]="selectedPitches[0]">
-  <option *ngFor="let pitch of pitches"
-          [ngValue]="pitch">
-    {{pitch}}
-  </option>
-</select> </span>
-            <span *ngSwitchCase="'Pitch 2:'">
-            <select *ngIf="selectedPitchingArchetype === pitchingArchetypes[6];else standardPitch" class="centered aligned"
+                    <select *ngIf="selectedPitchingArchetype === pitchingArchetypes[5];else standardPitch" class="centered aligned"
                     [(ngModel)]="selectedPitches[1]">
                <option *ngFor="let pitch of ['Knuckleball']"
                        [ngValue]="pitch">
@@ -214,6 +207,14 @@ offset the slightly lower amount of innings during the season compared to starte
                   </select>
             </ng-template>
             </span>
+            <span *ngSwitchCase="'Pitch 2:'">
+                <select class="centered aligned" [(ngModel)]="selectedPitches[0]">
+                  <option *ngFor="let pitch of pitches"
+                          [ngValue]="pitch">
+                    {{pitch}}
+                  </option>
+                </select> </span>
+            
             <span *ngSwitchCase="'Pitch 3:'">
                   <select class="centered aligned" [(ngModel)]="selectedPitches[2]">
                     <option *ngFor="let pitch of pitches"
@@ -243,7 +244,7 @@ offset the slightly lower amount of innings during the season compared to starte
             <input type="number" [(ngModel)]="attribute.value" name="attribute.value" min={{attribute.min}}
                    max={{attribute.max}}>
           </label></td>
-          <td>{{attribute.cost()}}</td>
+          <td>{{attribute.cost(selectedPitchingArchetype.name)}}</td>
         </tr>
         <tr show-delay="250" placement="top" tooltip="Affects Stuff rating, that dictates how often pitcher strikes out opponents.
         Works better with pitches relying on velocity like Fastball, Sinker, Cutter, Splitter, Forkball.">

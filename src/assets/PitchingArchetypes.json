@@ -31,7 +31,7 @@
         {
           "name": "Stamina:",
           "min": 10,
-          "max": 15
+          "max": 30
         },
         {
           "name": "Holding Runners:",
@@ -96,7 +96,7 @@
         {
           "name": "Stamina:",
           "min": 10,
-          "max": 20
+          "max": 30
         },
         {
           "name": "Holding Runners:",
@@ -161,7 +161,7 @@
         {
           "name": "Stamina:",
           "min": 10,
-          "max": 20
+          "max": 30
         },
         {
           "name": "Holding Runners:",
@@ -170,13 +170,13 @@
         },
         {
           "name": "Pitch 1:",
-          "min": 50,
-          "max": 95
+          "min": 60,
+          "max": 100
         },
         {
           "name": "Pitch 2:",
-          "min": 60,
-          "max": 100
+          "min": 50,
+          "max": 95
         },
         {
           "name": "Pitch 3:",
@@ -192,71 +192,6 @@
           "name": "Pitch 5:",
           "min": 40,
           "max": 75
-        }
-      ]
-    },
-    {
-      "name": "Middle/Long Relief Pitcher (eg. Archie Bradley)",
-      "attributes": [
-        {
-          "name": "Velocity:",
-          "min": "90 - 92",
-          "max": "95 - 97"
-        },
-        {
-          "name": "Movement vs. LHB:",
-          "min": 50,
-          "max": 95
-        },
-        {
-          "name": "Movement vs. RHB:",
-          "min": 50,
-          "max": 95
-        },
-        {
-          "name": "Control vs. LHB:",
-          "min": 50,
-          "max": 85
-        },
-        {
-          "name": "Control vs. RHB:",
-          "min": 50,
-          "max": 85
-        },
-        {
-          "name": "Stamina:",
-          "min": 20,
-          "max": 40
-        },
-        {
-          "name": "Holding Runners:",
-          "min": 40,
-          "max": 90
-        },
-        {
-          "name": "Pitch 1:",
-          "min": 50,
-          "max": 100
-        },
-        {
-          "name": "Pitch 2:",
-          "min": 40,
-          "max": 85
-        },
-        {
-          "name": "Pitch 3:",
-          "min": 40,
-          "max": 80
-        },
-        {
-          "name": "Pitch 4:",
-          "min": 40,
-          "max": 70
-        },
-        {
-          "name": "Pitch 5:",
-          "min": 40,
-          "max": 60
         }
       ]
     },
@@ -365,13 +300,13 @@
         },
         {
           "name": "Pitch 1:",
-          "min": 45,
-          "max": 90
+          "min": 50,
+          "max": 95
         },
         {
           "name": "Pitch 2:",
-          "min": 50,
-          "max": 95
+          "min": 45,
+          "max": 90
         },
         {
           "name": "Pitch 3:",
@@ -430,13 +365,13 @@
         },
         {
           "name": "Pitch 1:",
-          "min": 30,
-          "max": 75
+          "min": 50,
+          "max": 90
         },
         {
           "name": "Pitch 2:",
-          "min": 50,
-          "max": 90
+          "min": 30,
+          "max": 75
         },
         {
           "name": "Pitch 3:",
