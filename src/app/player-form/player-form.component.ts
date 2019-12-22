@@ -307,6 +307,13 @@ export class PlayerFormComponent implements OnInit {
     if (this.selectedPitches[4] !== 'Pitch 5' && uniquePitches.includes(this.selectedPitches[4])){
       return alert(`You already selected ${this.selectedPitches[4]}, please select another pitch.`);
     }
+    if (uniquePitches.includes("Changeup") && uniquePitches.includes("Circle Change")){
+      return alert(`Having two changeups is not allowed, please replace one with another pitch.`);
+    }
+    if (!uniquePitches.includes("Fastball") && !uniquePitches.includes("Sinker") && !uniquePitches.includes("Cutter")){
+      return alert(`You are required to select Fastball type (fastball/cutter/sinker) pitch at creation with one of your starting pitches.`);
+    }
+    
     formString += '\n\nPitches: ' + this.selectedPitches[0] + ', ' + this.selectedPitches[1] + ', '
       + this.selectedPitches[2] + ', ' + (this.selectedPitches[3] !== 'Pitch 4' ? this.selectedPitches[3] + ', ' : ' ')
       + (this.selectedPitches[4] !== 'Pitch 5' ? this.selectedPitches[4] : ' ');
