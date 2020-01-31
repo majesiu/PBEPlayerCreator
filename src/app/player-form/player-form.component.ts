@@ -45,7 +45,7 @@ export class PlayerFormComponent implements OnInit {
   selectedPitches = ['Pitch 1', 'Pitch 2', 'Pitch 3', 'Pitch 4', 'Pitch 5'];
   pitches = ['Fastball', 'Sinker', 'Cutter', 'Curveball', 'Slider', 'Changeup', 'Splitter', 'Forkball', 'Circle Change',
     'Screwball', 'Knuckle Curve'];
-  positions = ['Closer', 'Starting Pitcher', 'Catcher', 'First Baseman', 'Second Baseman', 'Third Baseman', 'Shortstop',
+  positions = ['Relief Pitcher', 'Starting Pitcher', 'Catcher', 'First Baseman', 'Second Baseman', 'Third Baseman', 'Shortstop',
     'Left Fielder', 'Center Fielder', 'Right Fielder'];
   startDate = new Date(2007, 0, 1);
   public velocityValues = ['80 - 83',
@@ -194,8 +194,8 @@ export class PlayerFormComponent implements OnInit {
     uniquePositions.push(this.Selected3Position);
     formString += '\n3rd Position (100/200 experience): ' + this.Selected3Position;
     
-    if (['Starting Pitcher', 'Closer'].includes(this.SelectedPosition) || ['Starting Pitcher', 'Closer'].includes(this.Selected2Position) || ['Starting Pitcher', 'Closer'].includes(this.Selected3Position)) {
-      return alert('You can\'t select either Closer or Starting Pitcher as position for batter, please choose another');
+    if (['Starting Pitcher', 'Relief Pitcher'].includes(this.SelectedPosition) || ['Starting Pitcher', 'Relief Pitcher'].includes(this.Selected2Position) || ['Starting Pitcher', 'Relief Pitcher'].includes(this.Selected3Position)) {
+      return alert('You can\'t select either Relief Pitcher or Starting Pitcher as position for batter, please choose another');
     }
     if (this.selectedFieldingArchetype === this.fieldingArchetypes[6]) {
       if (!this.Selected4Position || this.Selected4Position.length === 0) {
@@ -209,8 +209,8 @@ export class PlayerFormComponent implements OnInit {
       if (!this.Selected5Position || this.Selected5Position.length === 0) {
         return alert('Please input the 5th Position');
       }
-      if (['Starting Pitcher', 'Closer'].includes(this.Selected4Position) || ['Starting Pitcher', 'Closer'].includes(this.Selected5Position)) {
-        return alert('You can\'t select either Closer or Starting Pitcher as position for batter, please choose another');
+      if (['Starting Pitcher', 'Relief Pitcher'].includes(this.Selected4Position) || ['Starting Pitcher', 'Relief Pitcher'].includes(this.Selected5Position)) {
+        return alert('You can\'t select either Relief Pitcher or Starting Pitcher as position for batter, please choose another');
       }
       if (uniquePositions.includes(this.Selected5Position)){
         return alert(`You already selected ${this.Selected5Position}, please select another position.`);
@@ -247,8 +247,8 @@ export class PlayerFormComponent implements OnInit {
     if (this.SelectedPosition.length === 0) {
       return alert('Please Select the Position');
     }
-    if (!['Starting Pitcher', 'Closer'].includes(this.SelectedPosition)) {
-      return alert('You have to select either Closer or Starting Pitcher as position for pitcher');
+    if (!['Starting Pitcher', 'Relief Pitcher'].includes(this.SelectedPosition)) {
+      return alert('You have to select either Relief Pitcher or Starting Pitcher as position for pitcher');
     }
     formString += '\n[b]Position:[/b] ' + this.SelectedPosition;
     formString += '\n[b]College:[/b] ' + this.College;

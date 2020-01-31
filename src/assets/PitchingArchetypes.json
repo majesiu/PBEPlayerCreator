@@ -1,7 +1,7 @@
 {
   "Archetypes": [
     {
-      "name": "Closing Power Pitcher (eg. Aroldis Chapman)",
+      "name": "Relief Power Pitcher (eg. Aroldis Chapman)",
       "attributes": [
         {
           "name": "Velocity:",
@@ -66,7 +66,7 @@
       ]
     },
     {
-      "name": "Closing Balanced Pitcher (eg. Andrew Miller)",
+      "name": "Relief Balanced Pitcher (eg. Andrew Miller)",
       "attributes": [
         {
           "name": "Velocity:",
@@ -131,7 +131,7 @@
       ]
     },
     {
-      "name": "Closing Finesse Pitcher (eg. Brad Ziegler)",
+      "name": "Relief Finesse Pitcher (eg. Brad Ziegler)",
       "attributes": [
         {
           "name": "Velocity:",
@@ -326,7 +326,7 @@
       ]
     },
     {
-      "name": "Knuckleball Pitcher (eg. R.A Dickey)",
+      "name": "Starting Knuckleball Pitcher (eg. R.A Dickey)",
       "attributes": [
         {
           "name": "Velocity:",

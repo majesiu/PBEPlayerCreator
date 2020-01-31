@@ -45,7 +45,7 @@
     </label></td>
   </tr>
   <tr show-delay="250" placement="bottom" tooltip="Position your player will play, to become pitcher it has to
-  be either Closer (also Mid/Long Relief Archetype) or Starting pitcher. Rest of the positions are Batters." class="">
+  be either Relief Pitcher or Starting pitcher. Rest of the positions are Batters." class="">
     <td style="font-weight: bold;">Position</td>
     <td><label>
       <select class="centered aligned" [(ngModel)]="SelectedPosition" required>
@@ -131,7 +131,7 @@
       <td>TPE Avalaible</td>
       <td>{{earnedPitcherTPE - selectedPitchingArchetype.costSum()}}</td>
     </tr>
-    <tr show-delay="250" placement="bottom" tooltip="The TPE that is already assigned to the build. Closers get bonus amount to
+    <tr show-delay="250" placement="bottom" tooltip="The TPE that is already assigned to the build. Relief Pitchers get bonus amount to
 offset the slightly lower amount of innings during the season compared to starters, making them more impactful in those" class="">
       <td>Base TPE</td>
       <td>{{selectedPitchingArchetype.costBase()}}</td>
@@ -167,7 +167,7 @@ offset the slightly lower amount of innings during the season compared to starte
     </mat-expansion-panel-header>
     <mat-panel-description>
     </mat-panel-description>
-    <div show-delay="250" placement="bottom" tooltip="First 4 archetypes are closers, latter 4 starters. Choose 1" class="">
+    <div show-delay="250" placement="bottom" tooltip="First 4 archetypes are Relief Pitchers, latter 4 starters. Choose 1" class="">
       <label>
         <select [(ngModel)]="selectedPitchingArchetype">
           <option *ngFor="let archetype of pitchingArchetypes"
