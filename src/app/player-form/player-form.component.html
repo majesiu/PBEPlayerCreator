@@ -9,7 +9,7 @@
   <a show-delay="250" placement="bottom" tooltip="Click to read about attributes in depth" class="" href="http://probaseballexperience.jcink.net/index.php?showtopic=2570" target="_blank"><button style="margin-right: 20px" class="btn waves-effect waves-navy">
     Attribute Guide
   </button></a>
-  <a show-delay="250" placement="bottom" tooltip="Click to find about first steps in the league" class="" href="http://probaseballexperience.jcink.net/index.php?showtopic=54" target="_blank"><button style="margin-right: 20px" class="btn waves-effect waves-navy">
+  <a show-delay="250" placement="bottom" tooltip="Click to find about first steps in the league" class="" href="http://probaseballexperience.jcink.net/index.php?showtopic=11013" target="_blank"><button style="margin-right: 20px" class="btn waves-effect waves-navy">
     New Player Guide
   </button></a>
   <a show-delay="250" placement="bottom" tooltip="Click to see sim results" class="" href="http://pbesim.com" target="_blank"><button style="margin-right: 20px" class="btn waves-effect waves-navy">
@@ -193,13 +193,13 @@ offset the slightly lower amount of innings during the season compared to starte
           <td [ngSwitch]="attribute.name" >
                 <span *ngSwitchCase="'Pitch 1:'">
                     <select *ngIf="selectedPitchingArchetype === pitchingArchetypes[5];else standardPitch" class="centered aligned"
-                    [(ngModel)]="selectedPitches[1]">
+                    [(ngModel)]="selectedPitches[0]">
                <option *ngFor="let pitch of ['Knuckleball']"
                        [ngValue]="pitch">
                       {{pitch}}
                     </option>
             </select>
-            <ng-template #standardPitch> <select class="centered aligned" [(ngModel)]="selectedPitches[1]">
+            <ng-template #standardPitch> <select class="centered aligned" [(ngModel)]="selectedPitches[0]">
                     <option *ngFor="let pitch of pitches"
                             [ngValue]="pitch">
                       {{pitch}}
@@ -208,7 +208,7 @@ offset the slightly lower amount of innings during the season compared to starte
             </ng-template>
             </span>
             <span *ngSwitchCase="'Pitch 2:'">
-                <select class="centered aligned" [(ngModel)]="selectedPitches[0]">
+                <select class="centered aligned" [(ngModel)]="selectedPitches[1]">
                   <option *ngFor="let pitch of pitches"
                           [ngValue]="pitch">
                     {{pitch}}
