@@ -315,9 +315,13 @@ export class PlayerFormComponent implements OnInit {
     }
     
     formString += '\n\nPitches: ' + this.selectedPitches[0] + ', ' + this.selectedPitches[1] + ', '
-      + this.selectedPitches[2] + ', ' + (this.selectedPitches[3] !== 'Pitch 4' ? this.selectedPitches[3] + ', ' : ' ')
-      + (this.selectedPitches[4] !== 'Pitch 5' ? this.selectedPitches[4] : ' ');
-
+      + this.selectedPitches[2] + (this.selectedPitches[3] !== 'Pitch 4' ? (', ' + this.selectedPitches[3]) : ' ')
+      + (this.selectedPitches[4] !== 'Pitch 5' ? (', ' + this.selectedPitches[4]) : ' ');
+    formString = formString.replace("Pitch 1", this.selectedPitches[0]);
+    formString = formString.replace("Pitch 2", this.selectedPitches[1]);
+    formString = formString.replace("Pitch 3", this.selectedPitches[2]);
+    formString = formString.replace("Pitch 4", this.selectedPitches[3]);
+    formString = formString.replace("Pitch 5", this.selectedPitches[4]);
     clipboard.writeText(formString).then( _ => { 
       alert('New thread on forums will open up - template was copied into clipboard, paste it there and create the thread');
       window.open('http://probaseballexperience.jcink.net/index.php?act=Post&CODE=00&f=2');
