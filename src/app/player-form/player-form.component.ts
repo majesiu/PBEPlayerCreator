@@ -322,6 +322,23 @@ export class PlayerFormComponent implements OnInit {
     formString = formString.replace("Pitch 3", this.selectedPitches[2]);
     formString = formString.replace("Pitch 4", this.selectedPitches[3]);
     formString = formString.replace("Pitch 5", this.selectedPitches[4]);
+
+    switch (this.selectedPitchingArchetype) {
+      case this.pitchingArchetypes[0]: 
+      case this.pitchingArchetypes[3]: 
+        formString += '\n\nGroundball Percentage: 51%';
+        break;
+      case this.pitchingArchetypes[1]: 
+      case this.pitchingArchetypes[5]: 
+      case this.pitchingArchetypes[6]: 
+        formString += '\n\nGroundball Percentage: 55%';
+        break;
+      case this.pitchingArchetypes[2]: 
+      case this.pitchingArchetypes[4]: 
+        formString += '\n\nGroundball Percentage: 59%';
+        break;
+    }
+
     clipboard.writeText(formString).then( _ => { 
       alert('New thread on forums will open up - template was copied into clipboard, paste it there and create the thread');
       window.open('http://probaseballexperience.jcink.net/index.php?act=Post&CODE=00&f=2');
