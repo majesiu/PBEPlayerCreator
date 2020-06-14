@@ -29,8 +29,7 @@ export class Attribute {
                     (this.value - 50) : this.value <= 70 ? 90 + 4 * (this.value - 60) : this.value <= 80 ? 130 + 6 *
                     (this.value - 70) : this.value <= 90 ? 190 + 7 * (this.value - 80) : 260 + 8 * (this.value - 90);
     
-    if (archetype === 'Starting Knuckleball Pitcher (eg. R.A Dickey)') return valueCost - minCost + (['Pitch 5:'].includes(this.name) ? 50 : 0);
-    else return valueCost - minCost + (['Pitch 4:', 'Pitch 5:'].includes(this.name) ? 50 : 0);
+    return valueCost - minCost + (['Pitch 4:', 'Pitch 5:'].includes(this.name) ? 50 : 0);
    
   }
   baseCost(archetype: string): number {
