@@ -9,8 +9,7 @@ export class Attribute {
     this.name = name;
     this.min = min;
     this.max = max;
-    if (archetype === 'Starting Knuckleball Pitcher (eg. R.A Dickey)') this.value = ['Pitch 5:'].includes(this.name) ? 0 : this.min;
-    else this.value = ['Pitch 4:', 'Pitch 5:'].includes(this.name) ? 0 : this.min;
+    this.value = ['Pitch 4:', 'Pitch 5:'].includes(this.name) ? 0 : this.min;
     
   }
 
@@ -31,15 +30,14 @@ export class Attribute {
                     (this.value - 70) : this.value <= 90 ? 190 + 7 * (this.value - 80) : 260 + 8 * (this.value - 90);
     
     if (archetype === 'Starting Knuckleball Pitcher (eg. R.A Dickey)') return valueCost - minCost + (['Pitch 5:'].includes(this.name) ? 50 : 0);
-    else  return valueCost - minCost + (['Pitch 4:', 'Pitch 5:'].includes(this.name) ? 50 : 0);
+    else return valueCost - minCost + (['Pitch 4:', 'Pitch 5:'].includes(this.name) ? 50 : 0);
    
   }
   baseCost(archetype: string): number {
     const minCost = this.min <= 40 ? this.min : this.min <= 50 ? 40 + 2 * (this.min - 40) : this.min <= 60 ? 60 + 3 * (this.min - 50) :
       this.min <= 70 ? 90 + 4 * (this.min - 60) : this.min <= 80 ? 130 + 6 * (this.min - 70) : this.min <= 90 ?
         190 + 7 * (this.min - 80) : 260 + 8 * (this.min - 90);
-    if (archetype === 'Starting Knuckleball Pitcher (eg. R.A Dickey)') return ['Pitch 5:', 'Bunting (Both):'].includes(this.name) ? 0 : minCost;
-    else  return ['Pitch 4:', 'Pitch 5:', 'Bunting (Both):'].includes(this.name) ? 0 : minCost;
+    return ['Pitch 4:', 'Pitch 5:', 'Bunting (Both):'].includes(this.name) ? 0 : minCost;
     
   }
 
